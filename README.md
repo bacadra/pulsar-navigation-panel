@@ -2,6 +2,10 @@
 
 in progress...
 
+## TODO
+
+* create new scope, because now scope overwrite dfault ouline :/
+
 ## See another bacadra packages...
 
 * [bacadra-atom](https://github.com/bacadra/bacadra-atom)

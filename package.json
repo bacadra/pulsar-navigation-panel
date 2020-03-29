@@ -39,7 +39,7 @@
     "commonmark": "^0.28.0",
     "etch": "^0.12.7"
   },
-  "description": "Show a hierarchical outline of a text document",
+  "description": "Show custom view of navigation mark in document",
   "devDependencies": {
     "eslint": "^3.7.0",
     "eslint-config-google": "^0.6.0"
