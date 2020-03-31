@@ -4,7 +4,13 @@ in progress...
 
 ## TODO
 
-* create new scope, because now scope overwrite dfault ouline :/
+* create new scope, because now scope overwrite default ouline :/
+* to overwrite default outline paste this lines into package.json -- make it automatic:
+```json
+"providedServices": {
+  "outline-view": {"versions": {"0.1.0": "provideOutlines"}}
+},
+```
 
 ## See another bacadra packages...
 
