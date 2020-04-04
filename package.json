@@ -1,9 +1,17 @@
 {
-  "description": "Show custom view of navigation mark in document",
+  "description": "Navigation pane of custom pattern for Atom IDE",
   "homepage": "https://github.com/bacadra/navigation-pane",
   "url": "https://github.com/bacadra/navigation-pane",
   "repository": "https://github.com/bacadra/navigation-pane",
   "main": "./lib/navigation-pane",
   "name": "navigation-pane",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "keywords": [
+    "bacadra",
+    "bib",
+    "latex",
+    "markdown",
+    "python",
+    "SOFiSTiK"
+  ]
 }
