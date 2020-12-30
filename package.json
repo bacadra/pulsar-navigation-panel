@@ -7,11 +7,13 @@
   "name": "navigation-pane",
   "version": "0.0.0",
   "keywords": [
+    "navigation",
+    "section",
     "bacadra",
-    "bib",
-    "latex",
-    "markdown",
-    "python",
+    "BibTex",
+    "LaTeX",
+    "Markdown",
+    "Python",
     "SOFiSTiK"
   ],
   "dependencies": {

@@ -1,0 +1,4 @@
+"atom-text-editor":
+  "f2"              : "navigation-pane:fold-toggle"
+  'alt-f2 alt-left' : 'navigation-pane:fold-as-TOC'
+  'alt-f2 alt-right': 'navigation-pane:unfold-all'
