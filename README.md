@@ -2,9 +2,11 @@
 
 Create custom list of sections.
 
+
 ## Sections panel
 
 Package offer custom panel to show navigation tree.
+
 
 ## Available markers
 
@@ -46,6 +48,7 @@ Section can be highlated. The default is line background highligth, but in can c
 
 There are function which provide fold, unfold or toggle sections following by the headers markers. The special future is to collapse all section to create view like table of content.
 
+
 ## TODO
 
 * to overwrite default outline paste this lines in `package.json` -- make it automatic:
@@ -54,16 +57,3 @@ There are function which provide fold, unfold or toggle sections following by th
   "outline-view": {"versions": {"0.1.0": "provideOutlines"}}
 },
 ```
-
-# See also
-
-* [bacadra-atom](https://github.com/bacadra/bacadra-atom)
-* [bib-finder](https://github.com/bacadra/bib-finder)
-* [fold-section](https://github.com/bacadra/fold-section)
-* [hydrogen-run](https://github.com/bacadra/hydrogen-run)
-* [image-paste](https://github.com/bacadra/image-paste)
-* [language-bacadra](https://github.com/bacadra/language-bacadra)
-* [language-sofistik](https://github.com/bacadra/language-sofistik)
-* [navigation-pane](https://github.com/bacadra/navigation-pane)
-* [sofistik-atom](https://github.com/bacadra/sofistik-atom)
-* [word-map](https://github.com/bacadra/word-map)
