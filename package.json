@@ -14,7 +14,8 @@
     "LaTeX",
     "Markdown",
     "Python",
-    "SOFiSTiK"
+    "SOFiSTiK",
+    "content"
   ],
   "dependencies": {
     "etch": "^0.14.0"
