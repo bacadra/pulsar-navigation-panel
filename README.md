@@ -50,14 +50,15 @@ Global regular expression is `/^ *\#{1,5} (.*)/`. The level is defined as count 
 
 ### Python
 
-Global regular expression is `/^([^#\n]*)#(?:%%)?(\${1,9}[spv]?|a)#(.*)/` where count of `$` mean the level on list and additional letter can be used to provide additional effect:
+Global regular expression is `/^([^#\n]*)#(?:%%)?(\${1,9}[spv1]?|a)#(.*)/` where count of `$` mean the level on list and additional letter can be used to provide additional effect:
 
 * `s`: get only text from first string which occur in this line,
 * `p`: python def or class; show only type and name of object
 * `v`: variable; show only name of variable
+* `1`: use only first word (split by whitespace), without optional after-colon
 
 As special case you can use `#a#` which mean auto level base on pattern:
-`<anythink>(<lvl as int>, "<text>"<anythink>)`. It is usefull e.g. in PyLaTex in simialr packages.
+`<any>(<lvl as int>, "<text>"<any>)`. It is useful e.g. in PyLaTex or similar.
 
 * e.g. `#$# Countries`
 * e.g. `#$$# United Kingdom`
