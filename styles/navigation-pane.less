@@ -29,6 +29,14 @@
       font-weight: normal;
     }
 
+    span.tree-item-text.technical {
+      color: green;
+    }
+
+    span.tree-item-text.important {
+      color: red;
+    }
+
     &.item-highlight {
       border: 0px solid @pane-item-border-color;
       border-radius: @component-border-radius;
@@ -42,7 +50,6 @@
 
     &.current {
       & > span.tree-item-text {
-        // font-weight: bold;
         color: blue;
       }
     }
