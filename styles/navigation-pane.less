@@ -5,93 +5,90 @@
 // @import "ui-variables";
 // @import "syntax-variables";
 
-.navigation-pane {
-  margin-left: 0px;
-  display: block;
-  overflow-y: auto;
-  // overflow-x: hidden;
-  user-select: none;
-  display: inline-block;
-  color: @syntax-text-color;
-  font-family: DejaVu Sans Mono;
-  font-size: 1.0em;
-  white-space: nowrap;
-
-  .list-nested-item {
-    margin-top: 5px;
-    margin-bottom: 0px;
-    padding: 1px 15px;
-    display: list-item;
-    margin-right: -3px;
-
-    span.tree-item-text {
-      line-height: normal;
-      font-weight: normal;
-    }
-
-    span.tree-item-text.technical {
-      color: green;
-    }
-
-    span.tree-item-text.important {
-      color: red;
-    }
-
-    &.item-highlight {
-      border: 0px solid @pane-item-border-color;
-      border-radius: @component-border-radius;
-      background: @background-color-highlight;
-      background-blend-mode: multiply;
-
-      span.tree-item-text {
-        font-weight: normal;
-      }
-    }
-
-    &.current {
-      & > span.tree-item-text {
-        color: blue;
-      }
-    }
-
-    // used for constant indentation in tree hierarchy when compressing/expanding (@CBenghi)
-    .icon {
-      margin-left: -10px;
-      width: 15px;
-    }
-
-    .icon.icon-chevron-down:before, .icon.icon-chevron-right:before {
-      font-size: 1.0em;
-    }
-
-    .icon.icon-one-dot {
-      margin-bottom: -0.65em;
-      overflow: hidden;
-    }
-
-    .icon.icon-one-dot:before {
-      content: "\25cf";
-      font-size: 0.5em;
-    }
-
-    span.tree-item-text:hover {
-      color: blue;
-    }
-
-    .list-tree {
-      margin-left: 5px;
-      margin-right: -5px;
-      overflow: hidden;
-    }
-  }
-}
+// .navigation-pane {
+//   margin-left: 0px;
+//   display: block;
+//   overflow-y: auto;
+//   // overflow-x: hidden;
+//   user-select: none;
+//   display: inline-block;
+//   color: @syntax-text-color;
+//   font-family: DejaVu Sans Mono;
+//   font-size: 1.0em;
+//   white-space: nowrap;
+//
+//   .list-nested-item {
+//     margin-top: 5px;
+//     margin-bottom: 0px;
+//     padding: 1px 15px;
+//     display: list-item;
+//     margin-right: -3px;
+//
+//     span.tree-item-text {
+//       line-height: normal;
+//       font-weight: normal;
+//     }
+//
+//     span.tree-item-text.technical {
+//       color: green;
+//     }
+//
+//     span.tree-item-text.important {
+//       color: red;
+//     }
+//
+//     &.item-highlight {
+//       border: 0px solid @pane-item-border-color;
+//       border-radius: @component-border-radius;
+//       background: @background-color-highlight;
+//       background-blend-mode: multiply;
+//
+//       span.tree-item-text {
+//         font-weight: normal;
+//       }
+//     }
+//
+//     &.current {
+//       & > span.tree-item-text {
+//         color: blue;
+//       }
+//     }
+//
+//     // used for constant indentation in tree hierarchy when compressing/expanding (@CBenghi)
+//     .icon {
+//       margin-left: -10px;
+//       width: 15px;
+//     }
+//
+//     .icon.icon-chevron-down:before, .icon.icon-chevron-right:before {
+//       font-size: 1.0em;
+//     }
+//
+//     .icon.icon-one-dot {
+//       margin-bottom: -0.65em;
+//       overflow: hidden;
+//     }
+//
+//     .icon.icon-one-dot:before {
+//       content: "\25cf";
+//       font-size: 0.5em;
+//     }
+//
+//     span.tree-item-text:hover {
+//       color: blue;
+//     }
+//
+//     .list-tree {
+//       margin-left: 5px;
+//       margin-right: -5px;
+//       overflow: hidden;
+//     }
+//   }
+// }
 
 .navigation-marker {
   background: rgba(220, 240, 180, 0.5);
 }
-.navigation-marker-1 {}
-// ... and more
-
 // e.g. of styles:
 // border-top: 0.016px solid @text-color-info;
 // background: rgba(180, 250, 175, 0.3);
