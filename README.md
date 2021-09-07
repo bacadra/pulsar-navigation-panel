@@ -8,6 +8,32 @@ Package offer custom panel to show navigation tree. The CSS can be customized.
 
 Section can be highlighted. The default is line background highlight, but in can change to border or any another by user styles.
 
+The colors can be adjusted to user preference and ui/syntax theme in `styles.less`.
+
+* e.g. all markers has highlighted background, but level 1, 2 and 3 has their own color
+  ```
+  .navigation-marker {
+    background: rgba(233, 228, 141, 0.3);
+  }
+  .navigation-marker-1 {
+    background: rgba(197, 218, 131, 0.3);
+  }
+  .navigation-marker-2 {
+    background: rgba(250, 192, 209, 0.3);
+  }
+  .navigation-marker-3 {
+    background: rgba(200, 197, 243, 0.3);
+  }
+  ```
+
+* e.g. add top border to markers with level 1
+  ```
+  .navigation-marker-1 {
+    border-top: 0.016px solid @text-color-info;
+  }
+  ```
+
+
 ## Section folding
 
 There are functions which provide fold actions (fold, unfold or toggle) of sections. The special future is to collapse all section to create a view like table of content.
@@ -64,7 +90,7 @@ As special case you can use `#a#` which mean auto level base on pattern `<any>(<
 * e.g. `#$$# United Kingdom`
 * e.g. `a = 5 #$$v#`
 * e.g. `class MyCounty(Country): #$$p#`
-* e.g. `document.section(1, 'Countries') #a#`
+* e.g. `document.section(1, 'Countries') #a!#`
 * e.g. `document.section(2, 'United Kingdom') #a#`
 
 ### ReStructuredText
