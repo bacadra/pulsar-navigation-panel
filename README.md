@@ -1,5 +1,7 @@
 # navigation-pane
 
+![docface](https://github.com/bacadra/atom-navigation-pane/blob/master/pic-1.png?raw=true)
+
 ## Sections panel
 
 Package offer custom panel to show navigation tree. The CSS can be customized.
