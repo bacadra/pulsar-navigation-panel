@@ -38,13 +38,13 @@ The colors can be adjusted to user preference and ui/syntax theme in `styles.les
 
 There are functions which provide fold actions (fold, unfold or toggle) of sections. The special future is to collapse all section to create a view like table of content.
 
-## Available scopes
 
-### ASCII
+## ASCII scope
 
 Global regular expression is `/^(=={0,5}|#\#{0,5})[ \t]+(.+?)(?:[ \t]+\1)?$/`.
 
-### LaTeX
+
+## LaTeX scope
 
 Global regular expression is `/[^%\n]*%\${1,5}% .*|^[^\%\n]*(?:\\(?:part|chapter|section|frametitle|subsection|framesubtitle|subsubsection|paragraph|subparagraph)\*?)(?:\[.*\])?{([^}]*)/`. The `\part{...}` is equal level 6.
 
@@ -52,7 +52,8 @@ Global regular expression is `/[^%\n]*%\${1,5}% .*|^[^\%\n]*(?:\\(?:part|chapter
 * e.g. `%$$% United Kingdom`
 * e.g. `\part{Resources}`
 
-### BibTeX
+
+## BibTeX scope
 
 Global regular expression is `/[^%\n]*%\${1,5}% (.*)|^[ ]*\@(\w*)[ ]*{[ ]*([^\,]*)/`. The `@` lines has lowest priority, equal to level 6.
 
@@ -60,14 +61,16 @@ Global regular expression is `/[^%\n]*%\${1,5}% (.*)|^[ ]*\@(\w*)[ ]*{[ ]*([^\,]
 * e.g. `%$$% United Kingdom`
 * e.g. `@book{jk2021, ...`
 
-### Markdown
+
+## Markdown scope
 
 Global regular expression is `/^ *\#{1,5} (.*)/`. The level is defined as count of `#`.
 
 * e.g. `# Countries`
 * e.g. `## United Kingdom`
 
-### Python
+
+## Python scope
 
 Global regular expression is `/^([^#\n]*)#(?:%%)?(\${1,9}[spv1]?|a)([\!\*-]?)#(.*)/` where count of `$` mean the level on list.
 
@@ -93,11 +96,13 @@ As special case you can use `#a#` which mean auto level base on pattern `<any>(<
 * e.g. `document.section(1, 'Countries') #a!#`
 * e.g. `document.section(2, 'United Kingdom') #a#`
 
-### ReStructuredText
+
+## ReStructuredText scope
 
 Global regular expression is `/^(.+)\n([!-/:-@[-[-~])\2+$/`.
 
-### SOFiSTiK
+
+## SOFiSTiK scope
 
 Global regular expression is `/^ *(#define [^\n=]+$|#enddef)|[^!\n]*!\${1,5}!.*|^!.!chapter +=*[^=\n]*|^ *.?prog +[^\n]*(?:\n *head +(.+))?|!.! +.*/`.
 
