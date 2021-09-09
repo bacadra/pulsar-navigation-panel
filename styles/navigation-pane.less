@@ -1,12 +1,7 @@
 .navigation-pane {
-  margin-left: 0px;
   overflow-y: auto;
   overflow-x: auto;
-  user-select: none;
   display: block;
-  color: @syntax-text-color;
-  font-family: DejaVu Sans Mono;
-  font-size: 1.0em;
   white-space: nowrap;
   overflow:auto;
 
@@ -45,7 +40,8 @@
 
     &.current {
       & > span.tree-item-text {
-        color: blue;
+        font-weight: bold;
+        color: @text-color-selected;
       }
     }
 
@@ -54,7 +50,6 @@
       padding-top: 5px;
     }
 
-    // used for constant indentation in tree hierarchy when compressing/expanding (@CBenghi)
     .icon {
       margin-left: -18px;
       width: 15px;
@@ -75,19 +70,11 @@
     }
 
     span.tree-item-text:hover {
-      color: blue;
+      color: @text-color-highlight;
     }
   }
 }
 
-// .navigation-marker {...}
-// e.g. of styles:
-// background: rgba(220, 240, 180, 0.5);
-// border-top: 0.016px solid @text-color-info;
-// background: rgba(180, 250, 175, 0.3);
-// background: rgba(105, 241, 187, 0.2);
-// background: rgba(190, 250, 175, 0.3);
-// background: none;
-// border-top: 0.1px solid @text-color-info;
-// border-bottom: 0.1px solid @text-color-info;
-// border: 0.1px solid @text-color-info;
+.navigation-marker {
+  background: @background-color-highlight;
+}
