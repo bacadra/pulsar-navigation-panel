@@ -106,7 +106,7 @@ Global regular expression is `/^(.+)\n([!-/:-@[-[-~])\2+$/`.
 
 ## SOFiSTiK scope
 
-Global regular expression is `/^ *(#define [^\n=]+$|#enddef)|[^!\n]*!\${1,5}!.*|^!.!chapter +=*[^=\n]*|^ *.?prog +[^\n]*(?:\n *head +(.+))?|!.! +.*/`.
+Global regular expression is `^ *(#define [^\n=]+$|#enddef)|^(?! *\$)[^!\n]*!\${1,5}!.*|^!.!chapter +=*[^=\n]*|^ *.?prog +[^\n]*(?:\n *head +(.+))?|^ *!.! +.*`.
 
 * e.g. `!$! Design slab`
 * e.g. `!$$! Req. reinforcement`
