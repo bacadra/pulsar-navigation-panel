@@ -5,7 +5,7 @@
   "repository": "https://github.com/bacadra/atom-navigation-pane",
   "main": "./lib/navigation-pane",
   "name": "navigation-pane",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "keywords": [
     "navigation",
     "section",
