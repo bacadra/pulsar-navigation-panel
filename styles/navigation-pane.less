@@ -1,4 +1,7 @@
+@navpane-indent: 20px;
+
 .navigation-pane {
+
   overflow-y: auto;
   overflow-x: auto;
   display: block;
@@ -12,7 +15,8 @@
 
   .list-nested-item {
     margin-top: 7px;
-    padding-left: 20px;
+    padding-left: @navpane-indent;
+    scroll-margin-left: @navpane-indent;
 
     span.tree-item-text {
       line-height: normal;
@@ -51,7 +55,7 @@
     }
 
     .icon {
-      margin-left: -18px;
+      margin-left: -@navpane-indent+2px;
       width: 15px;
     }
 
