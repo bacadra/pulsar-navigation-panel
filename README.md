@@ -9,9 +9,19 @@ Package offer panel to show navigation tree. The items of tree are created manua
 
 ## Highlight section
 
-Section can be highlighted. The default is line background highlight, but in can change to border or any another by user styles.
+For each header, the package can create a marker to highlight the text in the editor. The marker style can be customized. Markers can be turned off or on with the command `navigation-pane:toggle-markers` or by right-clicking on the panel and using the` Toggle markers`.
 
-The colors can be adjusted to user preference and ui/syntax theme in `styles.less` (File/Stylesheet..).
+
+## Section folding
+
+There are functions which provide fold actions (fold, unfold or toggle) of sections. The special future is to collapse all section to create a view like table of content.
+
+You can test and analyze regex's below at [regex101](https://regex101.com/). Just select flavor as `ECMAScript (JavaScript)` and paste statement.
+
+
+## Customize the appearance
+
+The panel can be adapted to the user's needs in many ways. Several options are outlined below. The colors can be adjusted to user preference and ui/syntax theme in `styles.less` (File/Stylesheet..).
 
 * e.g. all markers has highlighted background, but level 1, 2 and 3 has their own color
   ```
@@ -77,12 +87,8 @@ The colors can be adjusted to user preference and ui/syntax theme in `styles.les
   ```
 
 
-## Section folding
 
-There are functions which provide fold actions (fold, unfold or toggle) of sections. The special future is to collapse all section to create a view like table of content.
-
-You can test and analyze regex's below at [regex101](https://regex101.com/). Just select flavor as `ECMAScript (JavaScript)` and paste statement.
-
+# Supported scopes
 
 ## ASCII
 
