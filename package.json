@@ -8,14 +8,18 @@
   "version": "0.2.10",
   "keywords": [
     "navigation",
+    "outline",
     "section",
     "bacadra",
+    "marker",
+    "bookmark",
+    "ASCII",
     "BibTex",
     "LaTeX",
     "Markdown",
     "Python",
-    "SOFiSTiK",
-    "content"
+    "ReStructured",
+    "SOFiSTiK"
   ],
   "dependencies": {
     "etch": "^0.14.0"
