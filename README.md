@@ -72,7 +72,6 @@ The panel can be adapted to the user's needs in many ways. Several options are o
   .navigation-pane .list-nested-item {
     @navpane-indent: 50px;
     padding-left: @navpane-indent;
-    scroll-margin-left: @navpane-indent;
     .icon {
       margin-left: -@navpane-indent+2px;
     }
