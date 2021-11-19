@@ -96,11 +96,12 @@ Global regular expression is `/^(=={0,5}|#\#{0,5})[ \t]+(.+?)(?:[ \t]+\1)?$/`.
 
 ## LaTeX
 
-Global regular expression is `/[^%\n]*%\${1,5}% .*|^[^\%\n]*(?:\\(?:part|chapter|section|frametitle|subsection|framesubtitle|subsubsection|paragraph|subparagraph)\*?)(?:\[.*\])?{([^}]*)/`. The `\part{...}` is equal level 6, `\chapter{...}` is level 7 etc.
+Global regular expression is `[^%\n]*%(\${1,9})% (.*)|^[^\%\n]*\\((?:part|chapter|section|subsection|subsubsection|paragraph|subparagraph))\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc.
 
 * e.g. `%$% Countries`
 * e.g. `%$$% United Kingdom`
 * e.g. `\part{Resources}`
+* e.g. `\part[Title to TOC and Navigation Pane]{Resources but to long to TOC}`
 
 
 ## BibTeX
