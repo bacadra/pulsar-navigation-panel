@@ -155,7 +155,7 @@ Global regular expression is `/^(.+)\n([!-/:-@[-[-~])\2+$/`.
 
 ## SOFiSTiK
 
-Global regular expression is `^ *(#define [^\n=]+$|#enddef)|^(?! *\$)[^!\n]*!\${1,5}!.*|^!.!chapter +=*[^=\n]*|^ *.?prog +[^\n]*(?:\n *head +(.+))?|^ *!.! +.*`. The chapter is level 4, prog is level 5 and label is level 6.
+Global regular expression is `^ *(#define [^\n=]+$|#enddef)|(^(?! *\$)[^!\n]*)!(\$+)!(.*)|^!.!chapter +([^=\n]*)|^ *.?prog +([^\n]*)(?:\n *head +(.+))?|^ *!.! +(.*)`. The chapter is level 4, prog is level 5 and label is level 6.
 
 * e.g. `!$! Design slab`
 * e.g. `!$$! Req. reinforcement`
