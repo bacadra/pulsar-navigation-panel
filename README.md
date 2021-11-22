@@ -93,12 +93,12 @@ You can test and analyze regex's below at [regex101](https://regex101.com/). Jus
 
 ## ASCII
 
-Global regular expression is `/^(=={0,5}|#\#{0,5})[ \t]+(.+?)(?:[ \t]+\1)?$/`.
+Global regular expression is `^(=={0,5}|#\#{0,5})[ \t]+(.+?)(?:[ \t]+\1)?$`.
 
 
 ## LaTeX
 
-Global regular expression is `/([^%\n]*)%(\$+)([*!-]?)%(.*)|^[^\%\n]*\\(part|chapter|section|subsection|subsubsection|paragraph|subparagraph)\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc. The section commands can be changed in package settings. The commands are case insensitive.
+Global regular expression is `([^%\n]*)%(\$+)([*!-]?)%(.*)|^[^\%\n]*\\(part|chapter|section|subsection|subsubsection|paragraph|subparagraph)\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc. The section commands can be changed in package settings. The commands are case insensitive.
 
 * e.g. `%$!% Countries` -> `1. Countries` with important flag
 * e.g. `%$$% United Kingdom` -> `1.1. United Kingdom`
@@ -131,7 +131,7 @@ Global regular expression is `^ *(\#+) (.*)`. The level is defined as count of `
 
 ## Python
 
-Global regular expression is `/^([^#\n]*)#(?:%%)?(\$+[spv1]?|a)([\!\*-]?)#(.*)/` where count of `$` mean the level on list.
+Global regular expression is `^([^#\n]*)#(?:%%)?(\$+[spv1]?|a)([\!\*-]?)#(.*)` where count of `$` mean the level on list.
 
 Additional letter can be used to provide additional parse effect:
 
@@ -158,7 +158,7 @@ As special case you can use `#a#` which mean auto level base on pattern `<any>(<
 
 ## ReStructuredText
 
-Global regular expression is `/^(.+)\n([!-/:-@[-[-~])\2+$/`.
+Global regular expression is `^(.+)\n([!-/:-@[-[-~])\2+$`.
 
 
 ## SOFiSTiK
