@@ -86,7 +86,7 @@ The panel can be adapted to the user's needs in many ways. Several options are o
 
 # Supported scopes
 
-## REGEX testing
+## regex testing
 
 You can test and analyze regex's below at [regex101](https://regex101.com/). Just select flavor as `ECMAScript (JavaScript)` and paste statement.
 
@@ -98,12 +98,18 @@ Global regular expression is `/^(=={0,5}|#\#{0,5})[ \t]+(.+?)(?:[ \t]+\1)?$/`.
 
 ## LaTeX
 
-Global regular expression is `/([^%\n]*)%(\$+)%(.*)|^[^\%\n]*\\(part|chapter|section|subsection|subsubsection|paragraph|subparagraph)\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc. The section commands can be changed in package settings.
+Global regular expression is `/([^%\n]*)%(\$+)([*!-]?)%(.*)|^[^\%\n]*\\(part|chapter|section|subsection|subsubsection|paragraph|subparagraph)\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc. The section commands can be changed in package settings. The commands are case insensitive.
 
-* e.g. `%$% Countries` -> `1. Countries`
+* e.g. `%$!% Countries` -> `1. Countries` with important flag
 * e.g. `%$$% United Kingdom` -> `1.1. United Kingdom`
 * e.g. `\part{Resources}` -> `1.1.1.1. Resources`
 * e.g. `\part[Resources]{Resources but to long to TOC}` -> `1.1.1.1. Resources`
+
+In case of `([^%\n]*)%(\$+)%(.*)`, the additional letter can be used to provide additional visual effect:
+
+* `*`: technical section as green color
+* `!`: important section as red color
+* `-`: add top border in tree
 
 
 ## BibTeX
@@ -136,8 +142,8 @@ Additional letter can be used to provide additional parse effect:
 
 Additional letter can be used to provide additional visual effect:
 
-* `*`: technical section
-* `!`: important section
+* `*`: technical section as green color
+* `!`: important section as red color
 * `-`: add top border in tree
 
 As special case you can use `#a#` which mean auto level base on pattern `<any>(<lvl as int>, "<text>"<any>)`. It is useful e.g. in PyLaTex or similar.
