@@ -98,7 +98,7 @@ Global regular expression is `/^(=={0,5}|#\#{0,5})[ \t]+(.+?)(?:[ \t]+\1)?$/`.
 
 ## LaTeX
 
-Global regular expression is `/([^%\n]*)%(\$+)%(.*)|^[^\%\n]*\\((?:part|chapter|section|subsection|subsubsection|paragraph|subparagraph))\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc.
+Global regular expression is `/([^%\n]*)%(\$+)%(.*)|^[^\%\n]*\\(part|chapter|section|subsection|subsubsection|paragraph|subparagraph)\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc. The section commands can be changed in package settings.
 
 * e.g. `%$% Countries` -> `1. Countries`
 * e.g. `%$$% United Kingdom` -> `1.1. United Kingdom`
