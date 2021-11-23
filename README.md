@@ -2,9 +2,10 @@
 
 ![docface](https://github.com/bacadra/atom-navigation-pane/blob/master/docface.png?raw=true)
 
+
 ## Sections panel
 
-Package offer panel to show navigation tree. The items of tree are created manually by inserting special marks into text editor. Multiple scopes are supported (see below) with their own marker system.
+Package offer panel to show navigation tree. The items of tree are created manually by inserting special marks into text editor. Multiple scopes are supported (see below) with their own marker system. You can toggle visibility of pane by command `navigation-pane:toggle`.
 
 
 ## Highlight section
@@ -14,12 +15,31 @@ For each header, the package can create a marker to highlight the text in the ed
 
 ## Section folding
 
-There are functions which provide fold actions (fold, unfold or toggle) of sections. The special future is to collapse all section to create a view like table of content.
+There are functions which provide fold actions (fold, unfold or toggle) of sections. The special future is to collapse all section to create a view like table of content. You may be interested in following commands:
+
+* `navigation-pane:fold-section-at-n`: fold last section at level *n*
+
+* `navigation-pane:fold-section`: fold current section
+
+* `navigation-pane:unfold-current`: unfold current section
+
+* `navigation-pane:fold-toggle`: toggle fold of current section
+
+* `navigation-pane:fold-as-TOC`: fold all section but in nested form
+
+* `navigation-pane:unfold-all`: unfold all sections
 
 
 ## Real section level
 
 The package introduces the concept of multi-level headers. The user enters a tag with a level, which indicates **the maximum level** of the text associated with a given tag. The true level of the header will be determined when building the header tree using the rule that the header can have a level at most one greater than its predecessor. For example, if you enter a level 1 heading, then a level 2 heading, then a level 5 heading, then the real level of the last heading will be 3. The marker designations are for real headers.
+
+
+## regex testing
+
+In order to search for markers in a text editor, all lines of the editor are tested by global regular expressions. If the global expression returns a positive search result, the matched lines are further prepared. Global expressions can be found below, different for each scope.
+
+You can test and analyze regex's below at [regex101](https://regex101.com/). Just select flavor as `ECMAScript (JavaScript)` and paste statement.
 
 
 ## Customize the appearance
@@ -91,11 +111,6 @@ The panel can be adapted to the user's needs in many ways. Several options are o
 
 # Supported scopes
 
-## regex testing
-
-You can test and analyze regex's below at [regex101](https://regex101.com/). Just select flavor as `ECMAScript (JavaScript)` and paste statement.
-
-
 ## ASCII
 
 Global regular expression is `^(=={0,5}|#\#{0,5})[ \t]+(.+?)(?:[ \t]+\1)?$`.
@@ -103,7 +118,7 @@ Global regular expression is `^(=={0,5}|#\#{0,5})[ \t]+(.+?)(?:[ \t]+\1)?$`.
 
 ## LaTeX
 
-Global regular expression is `([^%\n]*)%(\$+)([*!-]?)%(.*)|^[^\%\n]*\\(part|chapter|section|subsection|subsubsection|paragraph|subparagraph)\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc. The section commands can be changed in package settings. The commands are case insensitive.
+Global regular expression is `([^%\n]*)%(\$+)([*!-]?)%(.*)|^[^\%\n]*\\(part*?|chapter*?|section*?|subsection*?|subsubsection*?|paragraph*?|subparagraph*?)\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc. The section commands can be changed in package settings. The commands are case insensitive.
 
 * e.g. `%$!% Countries` -> `1. Countries` with important flag
 * e.g. `%$$% United Kingdom` -> `1.1. United Kingdom`
@@ -175,6 +190,8 @@ Global regular expression is `^ *(#define [^\n=]+$|#enddef)|(^(?! *\$)[^!\n]*)!(
 * e.g. `!+!Chapter Design` -> `1.1.1.1. Design`
 * e.g. `+prog aqua` -> `1.1.1.1.1. aqua`
 * e.g. `+prog aqua \n head sections` -> `1.1.1.1.1.1. aqua: head sections`
+
+You can toggle section in define block by command `navigation-pane:toggle-defines` or in package options.
 
 
 # Contributions
