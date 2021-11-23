@@ -151,7 +151,7 @@ Global regular expression is `^ *(\#+) (.*)`. The level is defined as count of `
 
 ## Python
 
-Global regular expression is `^([^#\n]*)#(?:%%)?(\$+[spv1]?|a)([\!\*-]?)#(.*)` where count of `$` mean the level on list.
+Global regular expression is `^([^#\n]*)#(?:%%)?(\$+[spv1]?|\?)([\!\*-]?)#(.*)` where count of `$` mean the level on list.
 
 Additional letter can be used to provide additional parse effect:
 
@@ -172,8 +172,8 @@ As special case you can use `#a#` which mean auto level base on pattern `<any>(<
 * e.g. `#$$# United Kingdom` -> `1.1. United Kingdom`
 * e.g. `a = 5 #$$v#` -> `1.1. a`
 * e.g. `class MyCounty(Country): #$$p#` -> `1.1. MyCounty`
-* e.g. `document.section(1, 'Countries') #a!#` -> `1. Countries`
-* e.g. `document.section(2, 'United Kingdom') #a#` -> `1.1. United Kingdom`
+* e.g. `document.section(1, 'Countries') #?!#` -> `1. Countries`
+* e.g. `document.section(2, 'United Kingdom') #?#` -> `1.1. United Kingdom`
 
 
 ## ReStructuredText
@@ -191,7 +191,7 @@ Global regular expression is `^ *(#define [^\n=]+$|#enddef)|(^(?! *\$)[^!\n]*)!(
 * e.g. `+prog aqua` -> `1.1.1.1.1. aqua`
 * e.g. `+prog aqua \n head sections` -> `1.1.1.1.1.1. aqua: head sections`
 
-You can toggle section in define block by command `navigation-pane:toggle-defines` or in package options.
+You can toggle section in define block by command `navigation-pane:toggle-defines` or in package options. You need refocus or reopen text editor after change.
 
 
 # Contributions
