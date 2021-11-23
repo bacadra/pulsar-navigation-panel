@@ -166,7 +166,7 @@ Additional letter can be used to provide additional visual effect:
 * `!`: important section as red color
 * `-`: add top border in tree
 
-As special case you can use `#a#` which mean auto level base on pattern `<any>(<lvl as int>, "<text>"<any>)`. It is useful e.g. in PyLaTex or similar.
+As special case you can use `#?#` which mean auto level base on pattern `<any>(<lvl as int>, "<text>"<any>)`. It is useful e.g. in PyLaTex or similar.
 
 * e.g. `#$# Countries` -> `1. Countries`
 * e.g. `#$$# United Kingdom` -> `1.1. United Kingdom`
