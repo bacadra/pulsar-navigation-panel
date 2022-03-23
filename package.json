@@ -24,5 +24,5 @@
   "dependencies": {
     "etch": "^0.14.0"
   },
-  "license": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007"
+  "license": "GPL-3.0-or-later"
 }
