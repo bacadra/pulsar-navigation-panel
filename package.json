@@ -1,9 +1,9 @@
 {
-  "description": "Navigation pane in documents",
-  "homepage": "https://github.com/bacadra/atom-navigation-pane",
-  "url": "https://github.com/bacadra/atom-navigation-pane",
-  "repository": "https://github.com/bacadra/atom-navigation-pane",
-  "main": "./lib/navigation-pane",
+  "description": "Navigation panel",
+  "homepage": "https://github.com/bacadra/atom-navigation-panel",
+  "url": "https://github.com/bacadra/atom-navigation-panel",
+  "repository": "https://github.com/bacadra/atom-navigation-panel",
+  "main": "./lib/main",
   "name": "navigation-pane",
   "version": "0.2.22",
   "keywords": [

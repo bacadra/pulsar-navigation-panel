@@ -1,33 +1,33 @@
-# navigation-pane
+# navigation-panel
 
-![docface](https://github.com/bacadra/atom-navigation-pane/blob/master/assets/docface.png?raw=true)
+![docface](https://github.com/bacadra/atom-navigation-panel/blob/master/assets/docface.png?raw=true)
 
 
 ## Sections panel
 
-Package offer panel to show navigation tree. The items of tree are created manually by inserting special marks into text editor. Multiple scopes are supported (see below) with their own marker system. You can toggle visibility of pane by command `navigation-pane:toggle`.
+Package offer panel to show navigation tree. The items of tree are created manually by inserting special marks into text editor. Multiple scopes are supported (see below) with their own marker system. You can toggle visibility of panel by command `navigation-panel:toggle`.
 
 
 ## Highlight section
 
-For each header, the package can create a marker to highlight the text in the editor. The marker style can be customized. Markers can be turned off or on with the command `navigation-pane:toggle-markers` or by right-clicking on the panel and using the `Toggle markers`.
+For each header, the package can create a marker to highlight the text in the editor. The marker style can be customized. Markers can be turned off or on with the command `navigation-panel:toggle-markers` or by right-clicking on the panel and using the `Toggle markers`.
 
 
 ## Section folding
 
 There are functions which provide fold actions (fold, unfold or toggle) of sections. The special future is to collapse all section to create a view like table of content. You may be interested in following commands:
 
-* `navigation-pane:fold-section-at-n`: fold last section at level *n*
+* `navigation-panel:fold-section-at-n`: fold last section at level *n*
 
-* `navigation-pane:fold-section`: fold current section
+* `navigation-panel:fold-section`: fold current section
 
-* `navigation-pane:unfold-current`: unfold current section
+* `navigation-panel:unfold-current`: unfold current section
 
-* `navigation-pane:fold-toggle`: toggle fold of current section
+* `navigation-panel:fold-toggle`: toggle fold of current section
 
-* `navigation-pane:fold-as-TOC`: fold all section but in nested form
+* `navigation-panel:fold-as-TOC`: fold all section but in nested form
 
-* `navigation-pane:unfold-all`: unfold all sections
+* `navigation-panel:unfold-all`: unfold all sections
 
 
 ## Real section level
@@ -71,28 +71,28 @@ The panel can be adapted to the user's needs in many ways. Several options are o
 
 * e.g.: change color of active item text
   ```
-  .navigation-pane .list-nested-item.current > span.tree-item-text {
+  .navigation-panel .list-nested-item.current > span.tree-item-text {
     color: #304ee2;
   }
   ```
 
 * e.g. change color of hover item text
   ```
-  .navigation-pane .list-nested-item > span.tree-item-text:hover {
+  .navigation-panel .list-nested-item > span.tree-item-text:hover {
     color: #304ee2;
   }
   ```
 
 * e.g. item text wrapping
   ```
-  .navigation-pane {
+  .navigation-panel {
     white-space: normal;
   }
   ```
 
 * change indent of list items
   ```
-  .navigation-pane .list-nested-item {
+  .navigation-panel .list-nested-item {
     @navpane-indent: 50px;
     padding-left: @navpane-indent;
     .icon {
@@ -103,7 +103,7 @@ The panel can be adapted to the user's needs in many ways. Several options are o
 
 * change font to monospace (or any other...)
   ```
-  .navigation-pane {
+  .navigation-panel {
     font-family: monospace;
   }
   ```
@@ -191,7 +191,7 @@ Global regular expression is `^ *(#define [^\n=]+$|#enddef)|(^(?! *\$)[^!\n]*)!(
 * e.g. `+prog aqua` -> `1.1.1.1.1. aqua`
 * e.g. `+prog aqua \n head sections` -> `1.1.1.1.1.1. aqua: head sections`
 
-You can toggle section in define block by command `navigation-pane:toggle-defines` or in package options. You need refocus or reopen text editor after change.
+You can toggle section in define block by command `navigation-panel:toggle-defines` or in package options. You need refocus or reopen text editor after change.
 
 
 # Contributions
