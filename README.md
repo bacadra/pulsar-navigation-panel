@@ -1,6 +1,6 @@
 # navigation-pane
 
-![docface](https://github.com/bacadra/atom-navigation-pane/blob/master/docface.png?raw=true)
+![docface](https://github.com/bacadra/atom-navigation-pane/blob/master/assets/docface.png?raw=true)
 
 
 ## Sections panel
