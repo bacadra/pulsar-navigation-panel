@@ -5,34 +5,29 @@
 
 ## Sections panel
 
-Package offer panel to show navigation tree. The items of tree are created manually by inserting special marks into text editor. Multiple scopes are supported (see below) with their own marker system. You can toggle visibility of panel by command `navigation-panel:toggle`.
+This package provide the panel with navigation through custom symbols in text editors. The items of tree are created manually by inserting special marks into text editor. Multiple scopes are supported (see below) with their own marker system. You can toggle visibility of panel by command `navigation-panel:toggle`.
 
 
 ## Highlight section
 
-For each header, the package can create a marker to highlight the text in the editor. The marker style can be customized. Markers can be turned off or on with the command `navigation-panel:toggle-markers` or by right-clicking on the panel and using the `Toggle markers`.
+For each header, the package can create a marker to highlight the line text in the editor. The marker style can be customized. Markers can be turned off or on with the command `navigation-panel:markers` or by right-clicking on the panel and using the `Toggle markers`.
 
 
 ## Section folding
 
-There are functions which provide fold actions (fold, unfold or toggle) of sections. The special future is to collapse all section to create a view like table of content. You may be interested in following commands:
+There are functions which provide fold actions (fold, unfold or toggle) of sections. The special future is to collapse all section a view like table of content. You may be interested in following commands:
 
-* `navigation-panel:fold-section-at-n`: fold last section at level *n*
-
-* `navigation-panel:fold-section`: fold current section
-
-* `navigation-panel:unfold-current`: unfold current section
-
-* `navigation-panel:fold-toggle`: toggle fold of current section
-
-* `navigation-panel:fold-as-TOC`: fold all section but in nested form
-
-* `navigation-panel:unfold-all`: unfold all sections
+* `navigation-panel:section`: toggle fold of current section,
+* `navigation-panel:fold-section`: fold current section,
+* `navigation-panel:fold-section-at-n`: fold last section at level *n*,
+* `navigation-panel:fold-as-table`: fold all section but in nested form,
+* `navigation-panel:unfold`: unfold current section,
+* `navigation-panel:unfold-all`: unfold all sections.
 
 
 ## Real section level
 
-The package introduces the concept of multi-level headers. The user enters a tag with a level, which indicates **the maximum level** of the text associated with a given tag. The true level of the header will be determined when building the header tree using the rule that the header can have a level at most one greater than its predecessor. For example, if you enter a level 1 heading, then a level 2 heading, then a level 5 heading, then the real level of the last heading will be 3. The marker designations are for real headers.
+The package introduces the concept of multi-level headers. The user enters a tag with a level, which indicates **the maximum level** of the text associated with a given tag. The true level of the header will be determined when building the header tree using the rule that the header can have a level at most one greater than its predecessor. For example, if you enter a level 1 heading, then a level 2 heading, then a level 5 heading, then the real level of the last heading will be 3. The marker designations are for real headers. The real section level is use everywhere instead of user level.
 
 
 ## regex testing
@@ -69,38 +64,6 @@ The panel can be adapted to the user's needs in many ways. Several options are o
   }
   ```
 
-* e.g.: change color of active item text
-  ```
-  .navigation-panel .list-nested-item.current > span.tree-item-text {
-    color: #304ee2;
-  }
-  ```
-
-* e.g. change color of hover item text
-  ```
-  .navigation-panel .list-nested-item > span.tree-item-text:hover {
-    color: #304ee2;
-  }
-  ```
-
-* e.g. item text wrapping
-  ```
-  .navigation-panel {
-    white-space: normal;
-  }
-  ```
-
-* change indent of list items
-  ```
-  .navigation-panel .list-nested-item {
-    @navpane-indent: 50px;
-    padding-left: @navpane-indent;
-    .icon {
-      margin-left: -@navpane-indent+2px;
-    }
-  }
-  ```
-
 * change font to monospace (or any other...)
   ```
   .navigation-panel {
@@ -134,7 +97,7 @@ In case of `([^%\n]*)%(\$+)%(.*)`, the additional letter can be used to provide 
 
 ## BibTeX
 
-Global regular expression is `([^%\n]*)%(\$+)%(.*)|^[ ]*\@(\w*)[ ]*{[ ]*([^\,]*)`. The `@<type>{<text>,` is level 6.
+Global regular expression is `([^%\n]*)%(\$+)([\*!-]?)%(.*)|^[ ]*\@(\w*)[ ]*{[ ]*([^\,]*)`. The `@<type>{<text>,` is level 6.
 
 * e.g. `%$% Bibliography about countries` -> `1. Bibliography about countries`
 * e.g. `%$$% United Kingdom` -> `1.1. United Kingdom`
@@ -183,7 +146,7 @@ Global regular expression is `^(.+)\n([!-/:-@[-[-~])\2+$`.
 
 ## SOFiSTiK
 
-Global regular expression is `^ *(#define [^\n=]+$|#enddef)|(^(?! *\$)[^!\n]*)!(\$+)!(.*)|^!.!chapter +([^=\n]*)|^ *.?prog +([^\n]*)(?:\n *head +(.+))?|^ *!.! +(.*)`. The chapter is level 4, prog is level 5 and label is level 6.
+Global regular expression is `^ *(#define [^\n=]+$|#enddef)|(^(?! *\$)[^!\n]*)!(\$+)!(.*)|^!.!chapter +([^=\n]*)|^ *.?prog +([^\n]*)(?:\n *head +(.+))?|^ *!.! +(.*)|^\$ graphics +(\d+) +\| +picture +(\d+) +\| +layer +(\d+) +: *(.*)`. The chapter is level 4, prog is level 5 and label is level 6.
 
 * e.g. `!$! Design slab` -> `1. Design slab`
 * e.g. `!$$! Req. reinforcement` -> `1.1. Req. reinforcement`

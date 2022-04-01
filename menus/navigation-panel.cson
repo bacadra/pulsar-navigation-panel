@@ -1,7 +1,19 @@
 "context-menu":
   ".navigation-panel": [
     {
-      label  : 'Toggle pane',
-      command: 'navigation-panel:toggle'
+      label  : 'Toggle markers',
+      command: 'navigation-panel:markers'
+    },
+    {
+      label  : 'Fold section',
+      command: 'navigation-panel:section'
+    },
+    {
+      label  : 'Fold as table',
+      command: 'navigation-panel:fold-as-table'
+    },
+    {
+      label  : 'Unfold all',
+      command: 'navigation-panel:unfold-all'
     },
   ]
