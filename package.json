@@ -22,7 +22,7 @@
     "SOFiSTiK"
   ],
   "dependencies": {
-    "etch": "^0.14.0"
+    "etch": "^0.14.1"
   },
   "license": "GPL-3.0-or-later"
 }

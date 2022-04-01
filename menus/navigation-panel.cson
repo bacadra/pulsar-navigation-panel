@@ -1,0 +1,7 @@
+"context-menu":
+  ".navigation-panel": [
+    {
+      label  : 'Toggle pane',
+      command: 'navigation-panel:toggle'
+    },
+  ]

@@ -1,83 +1,91 @@
-@navpane-indent: 20px;
+@navigation-indent: 15px;
 
 .navigation-panel {
+  overflow: auto;
+  margin-left: -@navigation-indent;
+  // white-space: nowrap;
 
-  overflow-y: auto;
-  overflow-x: auto;
-  display: block;
-  white-space: nowrap;
-  overflow:auto;
+  .navigation-tree {
+    margin-left: @navigation-indent;
 
-  .list-tree {
-    display: table;
-    width: 100%;
-  }
-
-  .list-nested-item {
-    margin-top: 7px;
-    padding-left: @navpane-indent;
-    scroll-margin-left: 9999px;
-
-    span.tree-item-text {
-      line-height: normal;
-      font-weight: normal;
-    }
-
-    span.tree-item-text.technical {
-      color: green;
-    }
-
-    span.tree-item-text.important {
-      color: red;
-    }
-
-    &.item-highlight {
-      border: 0px solid @pane-item-border-color;
-      border-radius: @component-border-radius;
-      background: @background-color-highlight;
+    &.stack {
+      background: @background-color-selected;
       background-blend-mode: multiply;
-
-      span.tree-item-text {
-        font-weight: normal;
-      }
     }
 
-    &.current {
-      & > span.tree-item-text {
+    .navigation-block {
+      display: flex;
+      width: 100%;
+      scroll-margin-left: 999999px;
+
+      .navigation-icon {
+        cursor: pointer;
+        padding: 3px 0px;
+        width: 18px;
+        text-align: center;
+
+        &:before {
+          font-size: 1em;
+        }
+      }
+
+      .navigation-icon:hover {
+        background: @background-color-selected;
+        background-blend-mode: multiply;
+      }
+
+      .icon-one-dot:before {
+        content: "\25cf";
+        font-size: 0.5em;
+        vertical-align: middle;
+      }
+
+      .navigation-text {
+        cursor: pointer;
+        width: 100%;
+        padding: 3px 0px;
+      }
+
+      &.current .navigation-text {
+        color: @text-color-selected;
         font-weight: bold;
       }
-    }
 
-    &.separator {
-      border-top: 1px solid black;
-      padding-top: 5px;
-    }
+      &.important .navigation-text {
+        color:rgba(255, 0, 0, 0.1);
+      }
 
-    .icon {
-      margin-left: -@navpane-indent+2px;
-      width: 15px;
-    }
+      &.technical .navigation-text {
+        color: green;
+      }
 
-    .icon.icon-chevron-down:before, .icon.icon-chevron-right:before {
-      font-size: 1.0em;
-    }
+      &.separator {
+        border-top: 1px solid black;
+        padding-top: 5px;
+      }
 
-    .icon.icon-one-dot {
-      margin-bottom: -0.65em;
-      overflow: hidden;
-    }
-
-    .icon.icon-one-dot:before {
-      content: "\25cf";
-      font-size: 0.5em;
-    }
-
-    span.tree-item-text:hover {
-      color: @text-color-subtle;
+      &:hover {
+        background: @background-color-highlight;
+      }
     }
   }
 }
 
 .navigation-marker {
-  background: @background-color-highlight;
+  background: fade(@background-color-selected, 20%)
+}
+.navigation-marker-1 {
+  background: fade(@ui-site-color-1, 15%)
+}
+.navigation-marker-2 {
+  background: fade(@ui-site-color-2, 15%)
+}
+.navigation-marker-3 {
+  background: fade(@ui-site-color-3, 15%)
+}
+.navigation-marker-4 {
+  background: fade(@ui-site-color-4, 15%)
+}
+.navigation-marker-5 {
+  background: fade(@ui-site-color-5, 15%)
 }
