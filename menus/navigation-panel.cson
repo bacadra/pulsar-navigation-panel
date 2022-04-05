@@ -1,12 +1,20 @@
 "context-menu":
   ".navigation-panel": [
     {
-      label  : 'Technicals toggle',
-      command: 'navigation-panel:technicals-toggle'
+      label  : 'Info toggle',
+      command: 'navigation-panel:info-toggle'
     },
     {
-      label  : 'Importants toggle',
-      command: 'navigation-panel:importants-toggle'
+      label  : 'Success toggle',
+      command: 'navigation-panel:success-toggle'
+    },
+    {
+      label  : 'Warning toggle',
+      command: 'navigation-panel:warning-toggle'
+    },
+    {
+      label  : 'Error toggle',
+      command: 'navigation-panel:error-toggle'
     },
     {
       label  : 'Markers toggle',
@@ -16,20 +24,20 @@
       "type": "separator"
     },
     {
-      label  : 'Fold section',
-      command: 'navigation-panel:section'
+      label  : 'Toggle section',
+      command: 'navigation-panel:toggle-section'
     },
     {
       label  : 'Fold as table',
       command: 'navigation-panel:fold-as-table'
     },
     {
-      label  : 'Fold technicals',
-      command: 'navigation-panel:fold-technicals'
+      label  : 'Fold greens',
+      command: 'navigation-panel:fold-greens'
     },
     {
-      label  : 'Fold importants',
-      command: 'navigation-panel:fold-importants'
+      label  : 'Fold reds',
+      command: 'navigation-panel:fold-reds'
     },
     {
       label  : 'Unfold all',

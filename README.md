@@ -12,18 +12,18 @@ This package provide the panel with navigation through custom symbols in text ed
 
 For each header, the package can create a marker to highlight the line text in the editor. The marker style can be customized. Markers can be turned off or on with the command `navigation-panel:markers-toggle` or by right-clicking on the panel and using the `Toggle markers`.
 
-For most languages, flags have been implemented that allow the use of "important" (red colour) and "technical" (green colour). For how to use them, see the section on that language. Of course, the flags can be used in any language concept, e.g. to mark chapters to be checked as red (i.e. important) and finished chapters as green (i.e. technical).
+For most languages, flags have been implemented that allow the use one of "info", "sucess", "warning", "error" or "separator" flag. For how to use them, see the section on that language. The purpose of flag is depend on user.
 
 ## Section folding
 
 There are functions which provide fold actions (fold, unfold or toggle) of sections. The special future is to collapse all section a view like table of content. You may be interested in following commands:
 
-* `navigation-panel:section`: toggle fold of current section,
+* `navigation-panel:toggle-section`: toggle fold of current section,
 * `navigation-panel:fold-section`: fold current section,
 * `navigation-panel:fold-section-at-n`: fold last section at level *n*,
 * `navigation-panel:fold-as-table`: fold all section but in nested form,
-* `navigation-panel:fold-technical`: fold as table, but only headers with flag `technical`,
-* `navigation-panel:fold-important`: fold as table, but only headers with flag `important`,
+* `navigation-panel:fold-green`: fold as table, but only headers with flag `green`,
+* `navigation-panel:fold-red`: fold as table, but only headers with flag `red`,
 * `navigation-panel:unfold`: unfold current section,
 * `navigation-panel:unfold-all`: unfold all sections.
 
@@ -84,18 +84,20 @@ Global regular expression is `^(=={0,5}|#\#{0,5})[ \t]+(.+?)(?:[ \t]+\1)?$`.
 
 ## LaTeX
 
-Global regular expression is `([^%\n]*)%(\$+)([*!-]?)%(.*)|^[^\%\n]*\\(part*?|chapter*?|section*?|subsection*?|subsubsection*?|paragraph*?|subparagraph*?)\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc. The section commands can be changed in package settings. The commands are case insensitive.
+Global regular expression is `([^%\n]*)%(\$+)([\*\+\-\!\_]?)%(.*)|^[^\%\n]*\\(part*?|chapter*?|section*?|subsection*?|subsubsection*?|paragraph*?|subparagraph*?)\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc. The section commands can be changed in package settings. The commands are case insensitive.
 
-* e.g. `%$!% Countries` -> `1. Countries` with important flag
+* e.g. `%$!% Countries` -> `1. Countries` with error flag
 * e.g. `%$$% United Kingdom` -> `1.1. United Kingdom`
 * e.g. `\part{Resources}` -> `1.1.1.1. Resources`
 * e.g. `\part[Resources]{Resources but to long to TOC}` -> `1.1.1.1. Resources`
 
 In case of `([^%\n]*)%(\$+)%(.*)`, the additional letter can be used to provide additional visual effect:
 
-* `*`: technical section as green color
-* `!`: important section as red color
-* `-`: add top border in tree
+* `*`: info flag
+* `+`: sucess flag
+* `-`: warning flag
+* `!`: error flag
+* `_`: separator flag
 
 
 ## BibTeX
@@ -105,6 +107,14 @@ Global regular expression is `([^%\n]*)%(\$+)([\*!-]?)%(.*)|^[ ]*\@(\w*)[ ]*{[ ]
 * e.g. `%$% Bibliography about countries` -> `1. Bibliography about countries`
 * e.g. `%$$% United Kingdom` -> `1.1. United Kingdom`
 * e.g. `@book{jk2021, ...` -> `1.1.1.1.1.1. jk2021`
+
+Additional letter can be used to provide additional visual effect:
+
+* `*`: info flag
+* `+`: sucess flag
+* `-`: warning flag
+* `!`: error flag
+* `_`: separator flag
 
 
 ## Markdown
@@ -117,7 +127,7 @@ Global regular expression is `^ *(\#+) (.*)`. The level is defined as count of `
 
 ## Python
 
-Global regular expression is `^([^#\n]*)#(?:%%)?(\$+[spv1]?|\?)([\!\*-]?)#(.*)` where count of `$` mean the level on list.
+Global regular expression is `^([^#\n]*)#(?:%%)?(\$+[spv1]?|\?)([\*\+\-\!\_]?)#(.*)` where count of `$` mean the level on list.
 
 Additional letter can be used to provide additional parse effect:
 
@@ -128,18 +138,21 @@ Additional letter can be used to provide additional parse effect:
 
 Additional letter can be used to provide additional visual effect:
 
-* `*`: technical section as green color
-* `!`: important section as red color
-* `-`: add top border in tree
+* `*`: info flag
+* `+`: sucess flag
+* `-`: warning flag
+* `!`: error flag
+* `_`: separator flag
 
-As special case you can use `#?#` which mean auto level base on pattern `<any>(<lvl as int>, "<text>"<any>)`. It is useful e.g. in PyLaTex or similar.
+As special case you can use `#?#` or `#?<flag>#` which mean auto level base on pattern `<any>(<lvl as int>, "<text>"<any>)`. It is useful e.g. in PyLaTex or similar.
 
 * e.g. `#$# Countries` -> `1. Countries`
 * e.g. `#$$# United Kingdom` -> `1.1. United Kingdom`
 * e.g. `a = 5 #$$v#` -> `1.1. a`
 * e.g. `class MyCounty(Country): #$$p#` -> `1.1. MyCounty`
 * e.g. `document.section(1, 'Countries') #?!#` -> `1. Countries`
-* e.g. `document.section(2, 'United Kingdom') #?#` -> `1.1. United Kingdom`
+* e.g. `document.section(2, 'United Kingdom') #?+#` -> `1.1. United Kingdom` with sucess flag
+* e.g. `document.section(2, 'United Kingdom') #?!#` -> `1.1. United Kingdom` with error flag
 
 
 ## ReStructuredText

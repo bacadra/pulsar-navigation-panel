@@ -51,12 +51,20 @@
         font-weight: bold;
       }
 
-      &.important .navigation-text {
-        color: red;
+      &.info .navigation-text {
+        color: @text-color-info;
       }
 
-      &.technical .navigation-text {
-        color: green;
+      &.success .navigation-text {
+        color: @text-color-success;
+      }
+
+      &.warning .navigation-text {
+        color: @text-color-warning;
+      }
+
+      &.error .navigation-text {
+        color: @text-color-error;
       }
 
       &.separator {
