@@ -12,6 +12,7 @@ This package provide the panel with navigation through custom symbols in text ed
 
 For each header, the package can create a marker to highlight the line text in the editor. The marker style can be customized. Markers can be turned off or on with the command `navigation-panel:markers` or by right-clicking on the panel and using the `Toggle markers`.
 
+For most languages, flags have been implemented that allow the use of "important" (red) and "technical" (green) flags. For how to use, see the section on the respective language. Of course, the flags may be used in any of its concepts, e.g.
 
 ## Section folding
 
@@ -21,6 +22,8 @@ There are functions which provide fold actions (fold, unfold or toggle) of secti
 * `navigation-panel:fold-section`: fold current section,
 * `navigation-panel:fold-section-at-n`: fold last section at level *n*,
 * `navigation-panel:fold-as-table`: fold all section but in nested form,
+* `navigation-panel:fold-technical`: fold as table, but only headers with flag `technical`,
+* `navigation-panel:fold-important`: fold as table, but only headers with flag `important`,
 * `navigation-panel:unfold`: unfold current section,
 * `navigation-panel:unfold-all`: unfold all sections.
 
