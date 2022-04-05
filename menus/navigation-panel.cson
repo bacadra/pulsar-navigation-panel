@@ -1,8 +1,19 @@
 "context-menu":
   ".navigation-panel": [
     {
-      label  : 'Toggle markers',
-      command: 'navigation-panel:markers'
+      label  : 'Technicals toggle',
+      command: 'navigation-panel:technicals-toggle'
+    },
+    {
+      label  : 'Importants toggle',
+      command: 'navigation-panel:importants-toggle'
+    },
+    {
+      label  : 'Markers toggle',
+      command: 'navigation-panel:markers-toggle'
+    },
+    {
+      "type": "separator"
     },
     {
       label  : 'Fold section',
@@ -11,6 +22,14 @@
     {
       label  : 'Fold as table',
       command: 'navigation-panel:fold-as-table'
+    },
+    {
+      label  : 'Fold technicals',
+      command: 'navigation-panel:fold-technicals'
+    },
+    {
+      label  : 'Fold importants',
+      command: 'navigation-panel:fold-importants'
     },
     {
       label  : 'Unfold all',
