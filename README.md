@@ -12,7 +12,7 @@ This package provide the panel with navigation through custom symbols in text ed
 
 For each header, the package can create a marker to highlight the line text in the editor. The marker style can be customized. Markers can be turned off or on with the command `navigation-panel:markers` or by right-clicking on the panel and using the `Toggle markers`.
 
-For most languages, flags have been implemented that allow the use of "important" (red) and "technical" (green) flags. For how to use, see the section on the respective language. Of course, the flags may be used in any of its concepts, e.g.
+For most languages, flags have been implemented that allow the use of "important" (red colour) and "technical" (green colour). For how to use them, see the section on that language. Of course, the flags can be used in any language concept, e.g. to mark chapters to be checked as red (i.e. important) and finished chapters as green (i.e. technical).
 
 ## Section folding
 
