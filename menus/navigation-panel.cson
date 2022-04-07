@@ -17,6 +17,10 @@
       command: 'navigation-panel:error-toggle'
     },
     {
+      label  : 'Standard toggle',
+      command: 'navigation-panel:standard-toggle'
+    },
+    {
       label  : 'Markers toggle',
       command: 'navigation-panel:markers-toggle'
     },

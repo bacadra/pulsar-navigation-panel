@@ -12,7 +12,13 @@ This package provide the panel with navigation through custom symbols in text ed
 
 For each header, the package can create a marker to highlight the line text in the editor. The marker style can be customized. Markers can be turned off or on with the command `navigation-panel:markers-toggle` or by right-clicking on the panel and using the `Toggle markers`.
 
-For most languages, flags have been implemented that allow the use one of "info", "sucess", "warning", "error" or "separator" flag. For how to use them, see the section on that language. The purpose of flag is depend on user.
+
+## Categories
+
+Mark headers by categories. The categories can be filtered in bottom bar of panel, context menu of panel or by command. The categories are predefined: info, success, warning, error. The meaning of the categories depends on the creativity of the user, use them as you like.
+
+The categories bar can be found at the bottom of panel. It can by turn on/off in package settings.
+
 
 ## Section folding
 
