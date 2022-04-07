@@ -3,5 +3,3 @@
 
 ".navigation-search":
   'enter': "navigation-panel:filter"
-  'delete': 'unset!'
-  'backspace': 'unset!'
