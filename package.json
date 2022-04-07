@@ -22,7 +22,9 @@
     "SOFiSTiK"
   ],
   "dependencies": {
-    "etch": "^0.14.1"
+    "etch": "^0.14.1",
+    "fuzzaldrin": "^2.1.0",
+    "fuzzaldrin-plus": "^0.6.0"
   },
   "license": "GPL-3.0-or-later"
 }

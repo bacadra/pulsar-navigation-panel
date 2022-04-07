@@ -1,2 +1,7 @@
 'atom-workspace':
   'alt-n': 'navigation-panel:toggle'
+
+".navigation-search":
+  'enter': "navigation-panel:filter"
+  'delete': 'unset!'
+  'backspace': 'unset!'
