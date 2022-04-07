@@ -1,6 +1,17 @@
 "context-menu":
   ".navigation-panel": [
     {
+      label  : 'Activate all',
+      command: 'navigation-panel:activate-all-categories'
+    },
+    {
+      label  : 'Deactivate all',
+      command: 'navigation-panel:deactivate-all-categories'
+    },
+    {
+      "type": "separator"
+    },    
+    {
       label  : 'Info toggle',
       command: 'navigation-panel:info-toggle'
     },
@@ -21,6 +32,9 @@
       command: 'navigation-panel:standard-toggle'
     },
     {
+      "type": "separator"
+    },
+    {
       label  : 'Markers toggle',
       command: 'navigation-panel:markers-toggle'
     },
@@ -32,12 +46,20 @@
       command: 'navigation-panel:fold-as-table'
     },
     {
-      label  : 'Fold greens',
-      command: 'navigation-panel:fold-greens'
+      label  : 'Fold all info',
+      command: 'navigation-panel:fold-all-info'
     },
     {
-      label  : 'Fold reds',
-      command: 'navigation-panel:fold-reds'
+      label  : 'Fold all success',
+      command: 'navigation-panel:fold-all-success'
+    },
+    {
+      label  : 'Fold all warning',
+      command: 'navigation-panel:fold-all-warning'
+    },
+    {
+      label  : 'Fold all error',
+      command: 'navigation-panel:fold-all-error'
     },
     {
       label  : 'Unfold all',

@@ -19,6 +19,14 @@ Mark headers by categories. The categories can be filtered in bottom bar of pane
 
 The categories bar can be found at the bottom of panel. It can by turn on/off in package settings.
 
+* `navigation-panel:activate-all-categories`: activate all categories,
+* `navigation-panel:deactivate-all-categories`: deactivate all categories,
+* `navigation-panel:info-toggle`: toggle info category headers,
+* `navigation-panel:success-toggle`: toggle success category headers,
+* `navigation-panel:warning-toggle`: toggle warning category headers,
+* `navigation-panel:error-toggle`:  toggle error category headers,
+* `navigation-panel:standard-toggle`:  toggle category-less headers.
+
 
 ## Section folding
 
