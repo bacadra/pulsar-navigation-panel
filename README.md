@@ -15,7 +15,7 @@ The package introduces the concept of multi-level headers. The user enters a tag
 
 ## Highlight section
 
-For each header, the package can create a marker to highlight the line text in the editor. The marker style can be customized. Markers can be turned off or on with the command `navigation-panel:markers-toggle` or by right-clicking on the panel and using the `Toggle markers`.
+For each header, the package can create a marker to highlight the line text in the editor. The marker style can be customized. Markers can be turned off or on with the command `navigation-panel:markers-toggle` or by right-clicking on the panel and using the `Markers Toggle`.
 
 
 ## Categories
@@ -41,10 +41,10 @@ There are functions which provide fold actions (fold, unfold or toggle) of secti
 * `navigation-panel:fold-section`: fold current section,
 * `navigation-panel:fold-section-at-n`: fold last section at level *n*,
 * `navigation-panel:fold-as-table`: fold all section but in nested form,
-* `navigation-panel:fold-all-info`: fold as table, but only headers with category `info`,
-* `navigation-panel:fold-all-success`: fold as table, but only headers with category `success`,
-* `navigation-panel:fold-all-warning`: fold as table, but only headers with category `warning`,
-* `navigation-panel:fold-all-error`: fold as table, but only headers with category `error`,
+* `navigation-panel:fold-all-infos`: fold as table, but only headers with category `info`,
+* `navigation-panel:fold-all-successes`: fold as table, but only headers with category `success`,
+* `navigation-panel:fold-all-warnings`: fold as table, but only headers with category `warning`,
+* `navigation-panel:fold-all-errors`: fold as table, but only headers with category `error`,
 * `navigation-panel:unfold`: unfold current section,
 * `navigation-panel:unfold-all`: unfold all sections.
 
@@ -119,20 +119,20 @@ Global regular expression is `^(=={0,5}|#\#{0,5})[ \t]+(.+?)(?:[ \t]+\1)?$`.
 
 ## LaTeX
 
-Global regular expression is `([^%\n]*)%(\$+)([\*\+\-\!\_]?)%(.*)|^[^\%\n]*\\(part*?|chapter*?|section*?|subsection*?|subsubsection*?|paragraph*?|subparagraph*?)\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc. The section commands can be changed in package settings. The commands are case insensitive.
+Global regular expression is `([^%\n]*)%(\$+)([\*\+\-\!\_]?)%(.*)|^[^\%\n]*\\(part*?|chapter*?|section*?|subsection*?|subsubsection*?|paragraph*?|subparagraph*?)\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc. The section commands can be changed in package settings.
 
-* e.g. `%$!% Countries` -> `1. Countries` with error flag
+* e.g. `%$!% Countries` -> `1. Countries` with error category
 * e.g. `%$$% United Kingdom` -> `1.1. United Kingdom`
 * e.g. `\part{Resources}` -> `1.1.1.1. Resources`
 * e.g. `\part[Resources]{Resources but to long to TOC}` -> `1.1.1.1. Resources`
 
 In case of `([^%\n]*)%(\$+)%(.*)`, the additional letter can be used to provide additional visual effect:
 
-* `*`: info flag
-* `+`: sucess flag
-* `-`: warning flag
-* `!`: error flag
-* `_`: separator flag
+* `*`: info category
+* `+`: sucess category
+* `-`: warning category
+* `!`: error category
+* `_`: separator category
 
 
 ## BibTeX
@@ -145,11 +145,11 @@ Global regular expression is `([^%\n]*)%(\$+)([\*!-]?)%(.*)|^[ ]*\@(\w*)[ ]*{[ ]
 
 Additional letter can be used to provide additional visual effect:
 
-* `*`: info flag
-* `+`: sucess flag
-* `-`: warning flag
-* `!`: error flag
-* `_`: separator flag
+* `*`: info category
+* `+`: sucess category
+* `-`: warning category
+* `!`: error category
+* `_`: separator category
 
 
 ## Markdown
@@ -173,21 +173,21 @@ Additional letter can be used to provide additional parse effect:
 
 Additional letter can be used to provide additional visual effect:
 
-* `*`: info flag
-* `+`: sucess flag
-* `-`: warning flag
-* `!`: error flag
-* `_`: separator flag
+* `*`: info category
+* `+`: sucess category
+* `-`: warning category
+* `!`: error category
+* `_`: separator category
 
-As special case you can use `#?#` or `#?<flag>#` which mean auto level base on pattern `<any>(<lvl as int>, "<text>"<any>)`. It is useful e.g. in PyLaTex or similar.
+As special case you can use `#?#` or `#?<category>#` which mean auto level base on pattern `<any>(<lvl as int>, "<text>"<any>)`. It is useful e.g. in PyLaTex or similar.
 
 * e.g. `#$# Countries` -> `1. Countries`
 * e.g. `#$$# United Kingdom` -> `1.1. United Kingdom`
 * e.g. `a = 5 #$$v#` -> `1.1. a`
 * e.g. `class MyCounty(Country): #$$p#` -> `1.1. MyCounty`
 * e.g. `document.section(1, 'Countries') #?!#` -> `1. Countries`
-* e.g. `document.section(2, 'United Kingdom') #?+#` -> `1.1. United Kingdom` with sucess flag
-* e.g. `document.section(2, 'United Kingdom') #?!#` -> `1.1. United Kingdom` with error flag
+* e.g. `document.section(2, 'United Kingdom') #?+#` -> `1.1. United Kingdom` with sucess category
+* e.g. `document.section(2, 'United Kingdom') #?!#` -> `1.1. United Kingdom` with error category
 
 
 ## ReStructuredText

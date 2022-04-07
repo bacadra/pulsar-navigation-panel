@@ -1,87 +1,84 @@
 "context-menu":
   ".navigation-panel": [
     {
-      label  : 'Activate all',
+      label  : 'Activate All',
       command: 'navigation-panel:activate-all-categories'
     },
     {
-      label  : 'Deactivate all',
+      label  : 'Deactivate All',
       command: 'navigation-panel:deactivate-all-categories'
     },
     {
-      "type": "separator"
-    },
-    {
-      label  : 'Info toggle',
+      label  : 'Info Toggle',
       command: 'navigation-panel:info-toggle'
     },
     {
-      label  : 'Success toggle',
+      label  : 'Success Toggle',
       command: 'navigation-panel:success-toggle'
     },
     {
-      label  : 'Warning toggle',
+      label  : 'Warning Toggle',
       command: 'navigation-panel:warning-toggle'
     },
     {
-      label  : 'Error toggle',
+      label  : 'Error Toggle',
       command: 'navigation-panel:error-toggle'
     },
     {
-      label  : 'Standard toggle',
+      label  : 'Standard Toggle',
       command: 'navigation-panel:standard-toggle'
     },
     {
       "type": "separator"
     },
     {
-      label  : 'Markers toggle',
+      label  : 'Markers Toggle',
       command: 'navigation-panel:markers-toggle'
     },
     {
       "type": "separator"
     },
     {
-      label  : 'Collapse all',
+      label  : 'Collapse All',
       command: 'navigation-panel:collapse-all'
     },
     {
-      label  : 'Collapse to current',
+      label  : 'Collapse to Current',
       command: 'navigation-panel:collapse-to-current'
     },
     {
-      label  : 'Uncollapse all',
+      label  : 'Uncollapse All',
       command: 'navigation-panel:uncollapse-all'
     },
     {
-      label  : 'Autocollapse toggle',
+      label  : 'Autocollapse Toggle',
       command: 'navigation-panel:autocollapse-toggle'
     },
     {
       "type": "separator"
     },
     {
-      label  : 'Fold as table',
+      label  : 'Fold as Table',
       command: 'navigation-panel:fold-as-table'
     },
     {
-      label  : 'Fold all info',
-      command: 'navigation-panel:fold-all-info'
+      label  : 'Fold all Infos',
+      command: 'navigation-panel:fold-all-infos'
     },
     {
-      label  : 'Fold all success',
-      command: 'navigation-panel:fold-all-success'
+      label  : 'Fold all Successes',
+      command: 'navigation-panel:fold-all-successes'
     },
     {
-      label  : 'Fold all warning',
-      command: 'navigation-panel:fold-all-warning'
+      label  : 'Fold all Warnings',
+      command: 'navigation-panel:fold-all-warnings'
     },
     {
-      label  : 'Fold all error',
-      command: 'navigation-panel:fold-all-error'
+      label  : 'Fold all Errors',
+      command: 'navigation-panel:fold-all-errors'
     },
     {
-      label  : 'Unfold all',
+      label  : 'Unfold All',
       command: 'navigation-panel:unfold-all'
     },
   ]
