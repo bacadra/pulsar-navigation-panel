@@ -28,10 +28,6 @@
       "type": "separator"
     },
     {
-      label  : 'Toggle section',
-      command: 'navigation-panel:toggle-section'
-    },
-    {
       label  : 'Fold as table',
       command: 'navigation-panel:fold-as-table'
     },
