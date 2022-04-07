@@ -60,7 +60,7 @@ You can test and analyze regex's below at [regex101](https://regex101.com/). Jus
 
 The panel can be adapted to the user's needs in many ways. Several options are outlined below. The colors can be adjusted to user preference and ui/syntax theme in `styles.less` (File/Stylesheet..).
 
-* e.g. all markers has highlighted background, but level 1, 2 and 3 has their own color
+* e.g. all markers has highlighted background, but level 1, 2 and 3 has their own color:
   ```
   .navigation-marker {
     background: rgba(233, 228, 141, 0.3);
@@ -76,20 +76,26 @@ The panel can be adapted to the user's needs in many ways. Several options are o
   }
   ```
 
-* e.g. add top border to markers with level 1
+* e.g. add top border to markers with level 1:
   ```
   .navigation-marker-1 {
     border-top: 0.016px solid @text-color-info;
   }
   ```
 
-* change font to monospace (or any other...)
+* change font to monospace (or any other...):
   ```
   .navigation-panel {
     font-family: monospace;
   }
   ```
 
+* change color of current header text:
+  ```
+  .navigation-panel .navigation-tree .navigation-block.current .navigation-text {
+    color: red;
+  }
+  ```
 
 # Supported scopes
 
