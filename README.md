@@ -28,8 +28,10 @@ There are functions which provide fold actions (fold, unfold or toggle) of secti
 * `navigation-panel:fold-section`: fold current section,
 * `navigation-panel:fold-section-at-n`: fold last section at level *n*,
 * `navigation-panel:fold-as-table`: fold all section but in nested form,
-* `navigation-panel:fold-green`: fold as table, but only headers with flag `green`,
-* `navigation-panel:fold-red`: fold as table, but only headers with flag `red`,
+* `navigation-panel:fold-all-info`: fold as table, but only headers with category `info`,
+* `navigation-panel:fold-all-success`: fold as table, but only headers with category `success`,
+* `navigation-panel:fold-all-warning`: fold as table, but only headers with category `warning`,
+* `navigation-panel:fold-all-error`: fold as table, but only headers with category `error`,
 * `navigation-panel:unfold`: unfold current section,
 * `navigation-panel:unfold-all`: unfold all sections.
 
