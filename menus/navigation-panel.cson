@@ -10,7 +10,7 @@
     },
     {
       "type": "separator"
-    },    
+    },
     {
       label  : 'Info toggle',
       command: 'navigation-panel:info-toggle'
@@ -37,6 +37,25 @@
     {
       label  : 'Markers toggle',
       command: 'navigation-panel:markers-toggle'
+    },
+    {
+      "type": "separator"
+    },
+    {
+      label  : 'Collapse all',
+      command: 'navigation-panel:collapse-all'
+    },
+    {
+      label  : 'Collapse to current',
+      command: 'navigation-panel:collapse-to-current'
+    },
+    {
+      label  : 'Uncollapse all',
+      command: 'navigation-panel:uncollapse-all'
+    },
+    {
+      label  : 'Autocollapse toggle',
+      command: 'navigation-panel:autocollapse-toggle'
     },
     {
       "type": "separator"

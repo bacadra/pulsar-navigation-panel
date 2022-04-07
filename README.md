@@ -8,6 +8,11 @@
 This package provide the panel with navigation through custom symbols in text editors. The items of tree are created manually by inserting special marks into text editor. Multiple scopes are supported (see below) with their own marker system. You can toggle visibility of panel by command `navigation-panel:toggle`.
 
 
+## Real section level
+
+The package introduces the concept of multi-level headers. The user enters a tag with a level, which indicates **the maximum level** of the text associated with a given tag. The true level of the header will be determined when building the header tree using the rule that the header can have a level at most one greater than its predecessor. For example, if you enter a level 1 heading, then a level 2 heading, then a level 5 heading, then the real level of the last heading will be 3. The marker designations are for real headers. The real section level is use everywhere instead of user level.
+
+
 ## Highlight section
 
 For each header, the package can create a marker to highlight the line text in the editor. The marker style can be customized. Markers can be turned off or on with the command `navigation-panel:markers-toggle` or by right-clicking on the panel and using the `Toggle markers`.
@@ -44,9 +49,17 @@ There are functions which provide fold actions (fold, unfold or toggle) of secti
 * `navigation-panel:unfold-all`: unfold all sections.
 
 
-## Real section level
+## Collapse tree
 
-The package introduces the concept of multi-level headers. The user enters a tag with a level, which indicates **the maximum level** of the text associated with a given tag. The true level of the header will be determined when building the header tree using the rule that the header can have a level at most one greater than its predecessor. For example, if you enter a level 1 heading, then a level 2 heading, then a level 5 heading, then the real level of the last heading will be 3. The marker designations are for real headers. The real section level is use everywhere instead of user level.
+Elements of the header tree can be collapsed. This can improve workflow or document clarity. A single heading can be expanded or collapsed using the arrow to its left, while there are also methods to change the expansion globally:
+
+* `navigation-panel:collapse-to-current`: collapse all headers, but uncollapse active tree,
+* `navigation-panel:collapse-all`: collapse all headers,
+* `navigation-panel:uncollapse-all`: uncollapse all headers.
+
+You may also be interested in the `autoCollapse` option, which will automatically expand only the active tree elements, while collapsing the rest. You can toggle setting by command also.
+
+* `navigation-panel:autocollapse-toggle`: toggle state of autocollapse setting.
 
 
 ## regex testing
