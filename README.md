@@ -5,7 +5,7 @@
 
 ## Sections panel
 
-This package provide the panel with navigation through custom symbols in text editors. The items of tree are created manually by inserting special marks into text editor. Multiple scopes are supported (see below) with their own marker system. You can toggle visibility of panel by command `navigation-panel:toggle`.
+This package provide the panel with navigation through custom symbols in text editors. The items of tree are created manually by inserting special marks into text editor. Multiple scopes are supported (see below) with their own marker system. You can open or hide panel by commands `navigation-panel:open` and `navigation-panel:hide`, optionally use `navigation-panel:toggle`. Package has fully support multiple cursors.
 
 
 ## Real section level
@@ -15,17 +15,18 @@ The package introduces the concept of multi-level headers. The user enters a tag
 
 ## Highlight section
 
-For each header, the package can create a marker to highlight the line text in the editor. The marker style can be customized. Markers can be turned off or on with the command `navigation-panel:markers-toggle` or by right-clicking on the panel and using the `Markers Toggle`.
+For each header, the package can create a marker to highlight the line text in the editor. The marker style can be customized.
 
 
 ## Categories
 
 Mark headers by categories. The categories can be filtered in bottom bar of panel, context menu of panel or by command. The categories are predefined: info, success, warning, error. The meaning of the categories depends on the creativity of the user, use them as you like.
 
-The categories bar can be found at the bottom of panel. It can by turn on/off in package settings.
+The settings of categories can be changed globally in package settings or locally by commands or in panel:
 
-* `navigation-panel:activate-all-categories`: activate all categories,
-* `navigation-panel:deactivate-all-categories`: deactivate all categories,
+* `navigation-panel:all-categories`: activate all categories,
+* `navigation-panel:none-categories`: deactivate all categories,
+* `navigation-panel:categories-toggle`: toggle all categories,
 * `navigation-panel:info-toggle`: toggle info category headers,
 * `navigation-panel:success-toggle`: toggle success category headers,
 * `navigation-panel:warning-toggle`: toggle warning category headers,
@@ -33,11 +34,23 @@ The categories bar can be found at the bottom of panel. It can by turn on/off in
 * `navigation-panel:standard-toggle`:  toggle category-less headers.
 
 
+## Collapse tree
+
+Elements of the header tree can be collapsed. This can improve workflow or document clarity. The global settings can be changed in package settings and local settings by context-menu of panel of by commands:
+
+* `navigation-panel:collapse-mode`: collapse all headers by default,
+* `navigation-panel:uncollapse-all`: uncollapse all headers by default.
+
+You may also be interested in the `autoCollapse` option, which will automatically expand only the active tree elements, while collapsing the rest. You can toggle setting globally in package settings or locally by context-menu of panel or by command:
+
+* `navigation-panel:auto-collapse-toggle`: toggle state of autocollapse setting.
+
+
 ## Section folding
 
 There are functions which provide fold actions (fold, unfold or toggle) of sections. The special future is to collapse all section a view like table of content. You may be interested in following commands:
 
-* `navigation-panel:toggle-section`: toggle fold of current section,
+* `navigation-panel:fold-toggle`: toggle fold of current section,
 * `navigation-panel:fold-section`: fold current section,
 * `navigation-panel:fold-section-at-n`: fold last section at level *n*,
 * `navigation-panel:fold-as-table`: fold all section but in nested form,
@@ -47,19 +60,6 @@ There are functions which provide fold actions (fold, unfold or toggle) of secti
 * `navigation-panel:fold-all-errors`: fold as table, but only headers with category `error`,
 * `navigation-panel:unfold`: unfold current section,
 * `navigation-panel:unfold-all`: unfold all sections.
-
-
-## Collapse tree
-
-Elements of the header tree can be collapsed. This can improve workflow or document clarity. A single heading can be expanded or collapsed using the arrow to its left, while there are also methods to change the expansion globally:
-
-* `navigation-panel:collapse-to-current`: collapse all headers, but uncollapse active tree,
-* `navigation-panel:collapse-all`: collapse all headers,
-* `navigation-panel:uncollapse-all`: uncollapse all headers.
-
-You may also be interested in the `autoCollapse` option, which will automatically expand only the active tree elements, while collapsing the rest. You can toggle setting by command also.
-
-* `navigation-panel:autocollapse-toggle`: toggle state of autocollapse setting.
 
 
 ## regex testing
@@ -166,7 +166,7 @@ Global regular expression is `^([^#\n]*)#(?:%%)?(\$+[spv1]?|\?)([\*\+\-\!\_]?)#(
 
 Additional letter can be used to provide additional parse effect:
 
-* `s`: get only text from first string which occur in this line,
+* `s`: get only text from first string which occur in this line
 * `p`: python def or class; show only type and name of object
 * `v`: variable; show only name of variable
 * `1`: use only first word (split by whitespace), without optional after-colon
@@ -204,8 +204,6 @@ Global regular expression is `^ *(#define [^\n=]+$|#enddef)|(^(?! *\$)[^!\n]*)!(
 * e.g. `!+!Chapter Design` -> `1.1.1.1. Design`
 * e.g. `+prog aqua` -> `1.1.1.1.1. aqua`
 * e.g. `+prog aqua \n head sections` -> `1.1.1.1.1.1. aqua: head sections`
-
-You can toggle section in define block by command `navigation-panel:toggle-defines` or in package options. You need refocus or reopen text editor after change.
 
 
 # Contributions

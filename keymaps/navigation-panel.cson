@@ -2,4 +2,5 @@
   'alt-n': 'navigation-panel:toggle'
 
 ".navigation-search":
-  'enter': "navigation-panel:filter"
+  'enter' : "navigation-panel:filter-query"
+  'escape': "navigation-panel:clear-query"

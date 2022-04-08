@@ -1,12 +1,16 @@
 "context-menu":
   ".navigation-panel": [
     {
-      label  : 'Activate All',
-      command: 'navigation-panel:activate-all-categories'
+      label  : 'All Categories',
+      command: 'navigation-panel:all-categories'
     },
     {
-      label  : 'Deactivate All',
-      command: 'navigation-panel:deactivate-all-categories'
+      label  : 'None Categories',
+      command: 'navigation-panel:none-categories'
+    },
+    {
+      label  : 'Categories Toggle',
+      command: 'navigation-panel:categories-toggle'
     },
     {
       label  : 'Info Toggle',
@@ -32,27 +36,16 @@
       "type": "separator"
     },
     {
-      label  : 'Markers Toggle',
-      command: 'navigation-panel:markers-toggle'
+      label  : 'Expand Mode',
+      command: 'navigation-panel:expand-mode'
     },
     {
-      "type": "separator"
+      label  : 'Collapse Mode',
+      command: 'navigation-panel:collapse-mode'
     },
     {
-      label  : 'Collapse All',
-      command: 'navigation-panel:collapse-all'
-    },
-    {
-      label  : 'Collapse to Current',
-      command: 'navigation-panel:collapse-to-current'
-    },
-    {
-      label  : 'Uncollapse All',
-      command: 'navigation-panel:uncollapse-all'
-    },
-    {
-      label  : 'Autocollapse Toggle',
-      command: 'navigation-panel:autocollapse-toggle'
+      label  : 'Auto Collapse Toggle',
+      command: 'navigation-panel:auto-collapse-toggle'
     },
     {
       "type": "separator"
