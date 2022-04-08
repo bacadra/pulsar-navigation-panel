@@ -34,7 +34,10 @@
     overflow: auto;
     height: 100%;
 
-    .background-message.centered {
+    .background-message {
+      margin-left: @navigation-indent;
+      position: relative;
+      height: 100%;
       color: @text-color-subtle;
     }
 
@@ -152,6 +155,9 @@
       &:hover {
         background-color: fade(@background-color-info, 40%);
       }
+      &:checked:hover {
+        background-color: fade(@background-color-info, 60%);
+      }
     }
 
     #navigation-switch-success {
@@ -161,6 +167,9 @@
       }
       &:hover {
         background-color: fade(@background-color-success, 40%);
+      }
+      &:checked:hover {
+        background-color: fade(@background-color-success, 60%);
       }
     }
 
@@ -172,6 +181,9 @@
       &:hover {
         background-color: fade(@background-color-warning, 40%);
       }
+      &:checked:hover {
+        background-color: fade(@background-color-warning, 60%);
+      }
     }
 
     #navigation-switch-error {
@@ -182,6 +194,9 @@
       &:hover {
         background-color: fade(@background-color-error, 40%);
       }
+      &:checked:hover {
+        background-color: fade(@background-color-error, 60%);
+      }
     }
 
     #navigation-switch-standard {
@@ -191,6 +206,9 @@
       }
       &:hover {
         background-color: fade(@text-color, 40%);
+      }
+      &:checked:hover {
+        background-color: fade(@text-color, 60%);
       }
     }
   }
