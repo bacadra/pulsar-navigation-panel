@@ -103,12 +103,6 @@ The panel can be adapted to the user's needs in many ways. Several options are o
   }
   ```
 
-* change color of current header text:
-  ```
-  .navigation-panel .navigation-tree .navigation-block.current .navigation-text {
-    color: red;
-  }
-  ```
 
 # Supported scopes
 
@@ -197,7 +191,7 @@ Global regular expression is `^(.+)\n([!-/:-@[-[-~])\2+$`.
 
 ## SOFiSTiK
 
-Global regular expression is `^ *(#define [^\n=]+$|#enddef)|(^(?! *\$)[^!\n]*)!(\$+)!(.*)|^!.!chapter +([^=\n]*)|^ *.?prog +([^\n]*)(?:\n *head +(.+))?|^ *!.! +(.*)|^\$ graphics +(\d+) +\| +picture +(\d+) +\| +layer +(\d+) +: *(.*)`. The chapter is level 4, prog is level 5 and label is level 6.
+Global regular expression is `^ *(#define [^\n=]+$|#enddef)|(^(?! *\$)[^!\n]*)!(\$+)!(.*)|^!.!chapter +(.*)|^ *(.)?prog +([^\n]*)(?:\n *head +(.+))?|^ *!.! +(.*)|^\$ graphics +(\d+) +\| +picture +(\d+) +\| +layer +(\d+) +: *(.*)`. The chapter is level 4, prog is level 5 and label is level 6.
 
 * e.g. `!$! Design slab` -> `1. Design slab`
 * e.g. `!$$! Req. reinforcement` -> `1.1. Req. reinforcement`

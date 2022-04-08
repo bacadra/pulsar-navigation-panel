@@ -74,4 +74,11 @@
       label  : 'Unfold All',
       command: 'navigation-panel:unfold-all'
     },
+    {
+      "type": "separator"
+    },
+    {
+      label  : 'Text Wrap Toggle',
+      command: 'navigation-panel:text-wrap-toggle'
+    },
   ]
