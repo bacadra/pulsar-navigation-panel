@@ -51,7 +51,6 @@
       .navigation-block {
         display: flex;
         width: 100%;
-        scroll-margin-left: 999999px;
 
         .navigation-icon {
           cursor: pointer;
@@ -215,7 +214,24 @@
       }
     }
   }
+}
 
+atom-dock.left, atom-dock.right {
+  .navigation-block {
+    scroll-margin-left: 999999px;
+  }
+}
+
+atom-dock.bottom {
+  .navigation-list {
+    white-space: nowrap;
+    margin-left: 0;
+    display: flex;
+    .navigation-tree {
+      margin-left: @navigation-indent/2;
+      display: table;
+    }
+  }
 }
 
 .navigation-marker {
