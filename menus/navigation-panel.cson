@@ -82,9 +82,6 @@
       command: 'navigation-panel:text-wrap-toggle'
     },
     {
-      "type": "separator"
-    },
-    {
       label  : 'Markers Toggle',
       command: 'navigation-panel:markers-toggle'
     },
