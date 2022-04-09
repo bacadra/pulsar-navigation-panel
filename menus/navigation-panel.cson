@@ -81,4 +81,19 @@
       label  : 'Text Wrap Toggle',
       command: 'navigation-panel:text-wrap-toggle'
     },
+    {
+      "type": "separator"
+    },
+    {
+      label  : 'Markers Toggle',
+      command: 'navigation-panel:markers-toggle'
+    },
+    {
+      label  : 'Search Bar Toggle',
+      command: 'navigation-panel:search-bar-toggle'
+    },
+    {
+      label  : 'Category Bar Toggle',
+      command: 'navigation-panel:category-bar-toggle'
+    },
   ]
