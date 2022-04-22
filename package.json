@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "etch": "^0.14.1",
-    "zadeh": "^3.0.0-beta.4"
+    "fuzzaldrin-plus": "^0.6.0"
   },
   "license": "GPL-3.0-or-later"
 }
