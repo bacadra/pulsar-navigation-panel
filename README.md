@@ -200,6 +200,11 @@ Global regular expression is `^ *(#define [^\n=]+$|#enddef)|(^(?! *\$)[^!\n]*)!(
 * e.g. `+prog aqua \n head sections` -> `1.1.1.1.1.1. aqua: head sections`
 
 
+## pdf-viewer
+
+The package support the outline tree of [pdf-viewer](https://atom.io/packages/pdf-viewer). You can search through document by all-in outline tree instead of PDFjs outline.
+
+
 # Contributions
 
 If you have idea how to improve the package, see bugs or want to support new scope, then feel free to share it via GitHub.
