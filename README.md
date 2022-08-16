@@ -38,12 +38,9 @@ The settings of categories can be changed globally in package settings or locall
 
 Elements of the header tree can be collapsed. This can improve workflow or document clarity. The global settings can be changed in package settings and local settings by context-menu of panel of by commands:
 
-* `navigation-panel:collapse-mode`: collapse all headers by default,
-* `navigation-panel:uncollapse-all`: uncollapse all headers by default.
-
-You may also be interested in the `autoCollapse` option, which will automatically expand only the active tree elements, while collapsing the rest. You can toggle setting globally in package settings or locally by context-menu of panel or by command:
-
-* `navigation-panel:auto-collapse-toggle`: toggle state of autocollapse setting.
+* `navigation-panel:collapse-mode`: collapse all headers now and if rebuilding,
+* `navigation-panel:expand-mode`: uncollapse all headers now and if rebuilding,
+* `navigation-panel:auto-collapse`: expand only active headers.
 
 
 ## Section folding

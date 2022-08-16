@@ -36,16 +36,16 @@
       "type": "separator"
     },
     {
-      label  : 'Expand Mode',
-      command: 'navigation-panel:expand-mode'
-    },
-    {
       label  : 'Collapse Mode',
       command: 'navigation-panel:collapse-mode'
     },
     {
-      label  : 'Auto Collapse Toggle',
-      command: 'navigation-panel:auto-collapse-toggle'
+      label  : 'Expand Mode',
+      command: 'navigation-panel:expand-mode'
+    },
+    {
+      label  : 'Auto Collapse',
+      command: 'navigation-panel:auto-collapse'
     },
     {
       "type": "separator"
