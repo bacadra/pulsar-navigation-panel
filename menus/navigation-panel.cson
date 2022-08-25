@@ -48,6 +48,10 @@
       command: 'navigation-panel:auto-collapse'
     },
     {
+      label  : 'Focus Current',
+      command: 'navigation-panel:focus-current'
+    },
+    {
       "type": "separator"
     },
     {
