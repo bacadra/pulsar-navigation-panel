@@ -1,4 +1,7 @@
+@import "ui-variables";
+
 @navigation-indent: 15px;
+@navigation-shader: rgba(0, 0, 0, 0.1);
 
 .navigation-panel {
   display: flex;
@@ -38,8 +41,7 @@
       margin-left: @navigation-indent;
 
       &.stack {
-        background: @background-color-selected;
-        background-blend-mode: multiply;
+        background: @navigation-shader;
       }
 
       .navigation-block {
@@ -49,7 +51,7 @@
         .navigation-icon {
           cursor: default;
           padding: 3px 0px;
-          width: 18px;
+          width: 16px;
           text-align: center;
 
           &:before {
@@ -58,8 +60,7 @@
         }
 
         .navigation-icon:hover {
-          background: @background-color-selected;
-          background-blend-mode: multiply;
+          background: @navigation-shader;
         }
 
         .icon-one-dot:before {
@@ -71,7 +72,7 @@
         .navigation-text {
           cursor: default;
           width: 100%;
-          padding: 3px 0px;
+          padding: 3px 3px;
 
           .badge {
             margin-right: 5px;
@@ -85,10 +86,6 @@
             font-size: 0.5em;
             vertical-align: middle;
           }
-
-          // .sofistik-navi-icon:hover {
-          //   color: @text-color-subtle !important;
-          // }
         }
 
         &.current .navigation-text {
@@ -117,15 +114,13 @@
         }
 
         &:hover {
-          background: @background-color-highlight;
+          background: @navigation-shader;
         }
       }
     }
   }
 
   .navigation-desk {
-    @import "ui-variables";
-
     display: flex;
     background: inherit;
     width: 100%;
@@ -211,7 +206,7 @@
 
 atom-dock.left, atom-dock.right {
   .navigation-block {
-    scroll-margin-left: 999999px;
+    scroll-margin-left: 1e4px;
   }
 }
 
@@ -231,17 +226,17 @@ atom-dock.bottom {
   background: fade(@background-color-selected, 20%)
 }
 .navigation-marker-1 {
-  background: fade(@ui-site-color-1, 15%)
+  background: fade(@ui-site-color-1, 20%)
 }
 .navigation-marker-2 {
-  background: fade(@ui-site-color-2, 15%)
+  background: fade(@ui-site-color-2, 20%)
 }
 .navigation-marker-3 {
-  background: fade(@ui-site-color-3, 15%)
+  background: fade(@ui-site-color-3, 20%)
 }
 .navigation-marker-4 {
-  background: fade(@ui-site-color-4, 15%)
+  background: fade(@ui-site-color-4, 20%)
 }
 .navigation-marker-5 {
-  background: fade(@ui-site-color-5, 15%)
+  background: fade(@ui-site-color-5, 20%)
 }
