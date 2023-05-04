@@ -26,5 +26,5 @@
     "etch": "^0.14.1",
     "zadeh": "^3.0.0-beta.4"
   },
-  "license": "GPL-3.0-or-later"
+  "license": "MIT"
 }

@@ -1,5 +1,10 @@
 # navigation-panel
 
+![Tag](https://img.shields.io/github/v/tag/bacadra/atom-navigation-panel?style=for-the-badge)
+![LastCommit](https://img.shields.io/github/last-commit/bacadra/atom-navigation-panel?style=for-the-badge)
+![RepoSize](https://img.shields.io/github/repo-size/bacadra/atom-navigation-panel?style=for-the-badge)
+![Licence](https://img.shields.io/github/license/bacadra/atom-navigation-panel?style=for-the-badge)
+
 ![docface](https://github.com/bacadra/atom-navigation-panel/blob/master/assets/docface.png?raw=true)
 
 ## Installation
