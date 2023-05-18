@@ -177,7 +177,7 @@ Global regular expression is `^([^#\n]*)#(?:%%)?(\$+[spv1]?|\?)([\*\+\-\!\_]?)#(
 
 Additional letter can be used to provide additional parse effect:
 
-* `s`: get only text from first string which occur in this line
+* `s`: get only text from first string which occur at line
 * `p`: python def or class; show only type and name of object
 * `v`: variable; show only name of variable
 * `1`: use only first word (split by whitespace), without optional after-colon
@@ -199,6 +199,33 @@ As special case you can use `#?#` or `#?<category>#` which mean auto level base 
 * e.g. `document.section(1, 'Countries') #?!#` -> `1. Countries`
 * e.g. `document.section(2, 'United Kingdom') #?+#` -> `1.1. United Kingdom` with sucess category
 * e.g. `document.section(2, 'United Kingdom') #?!#` -> `1.1. United Kingdom` with error category
+
+## C-like
+
+Global regular expression is `^([^\/\/\n]*)\/\/(\$+[sv1]?|\?)([\*\+\-\!\_]?)\/\/(.*)` where count of `$` mean the level on list.
+
+Additional letter can be used to provide additional parse effect:
+
+* `s`: get only text from first string which occur at line
+* `v`: variable; show only name of variable
+* `1`: use only first word (split by whitespace)
+
+Additional letter can be used to provide additional visual effect:
+
+* `*`: info category
+* `+`: sucess category
+* `-`: warning category
+* `!`: error category
+* `_`: separator category
+
+As special case you can use `//?//` or `//?<category>//` which mean auto level base on pattern `<any>(<lvl as int>, "<text>"<any>)`.
+
+* e.g. `//$// Countries` -> `1. Countries`
+* e.g. `//$$// United Kingdom` -> `1.1. United Kingdom`
+* e.g. `a = 5 //$$v//` -> `1.1. a`
+* e.g. `document.section(1, 'Countries') //?!//` -> `1. Countries`
+* e.g. `document.section(2, 'United Kingdom') //?+//` -> `1.1. United Kingdom` with sucess category
+* e.g. `document.section(2, 'United Kingdom') //?!//` -> `1.1. United Kingdom` with error category
 
 ## ReStructuredText
 
