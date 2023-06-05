@@ -245,7 +245,7 @@ Global regular expression is `^ *(#define [^\n=]+$|#enddef)|(^(?! *\$)[^!\n]*)!(
 
 The package support the outline tree of [pdf-viewer](https://github.com/bacadra/atom-pdf-viewer). You can search through document by all-in outline tree instead of PDFjs outline.
 
-# Contributing
+# Contributing [🍺](https://www.buymeacoffee.com/asiloisad)
 
 If you have ideas on how to improve the package, see bugs or want to support new features - feel free to share it via GitHub.
 
