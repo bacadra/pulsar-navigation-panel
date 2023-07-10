@@ -21,37 +21,41 @@
 
 ### Atom Text Editor
 
-The official Atom packages store has been [disabled](https://github.blog/2022-06-08-sunsetting-atom/). To get latest version run the shell command
+The official Atom packages store has been [disabled](https://github.blog/2022-06-08-sunsetting-atom/). To obtain the latest version, please run the following shell command:
 
-    apm install bacadra/atom-navigation-panel
+```shell
+apm install bacadra/atom-navigation-panel
+```
 
-and obtain the package directly from Github repository.
+This will allow you to directly download the package from the GitHub repository.
 
 ### Pulsar Text Editor
 
-The package has compability with [Pulsar](https://pulsar-edit.dev/) and can be install
+The package is compatible with [Pulsar](https://pulsar-edit.dev/) and can be installed using the following command:
 
-    ppm install bacadra/atom-navigation-panel
+```shell
+ppm install bacadra/atom-navigation-panel
+```
 
-or directly [navigation-panel](https://web.pulsar-edit.dev/packages/navigation-panel) from Pulsar package store.
+Alternatively, you can directly install [navigation-panel](https://web.pulsar-edit.dev/packages/navigation-panel) from the Pulsar package store.
 
 ## Sections panel
 
-This package provide the panel with navigation through custom symbols in text editors. The items of tree are created manually by inserting special marks into text editor. Multiple scopes are supported (see below) with their own marker system. You can open or hide panel by commands `navigation-panel:open` and `navigation-panel:hide`, optionally use `navigation-panel:toggle`. Package has fully support multiple cursors.
+This package provides a panel for navigating through custom symbols in text editors. The tree items are manually created by inserting special markers into the text editor. Multiple scopes are supported (see below) with their own marker system. You can open or hide the panel using the `navigation-panel:open` and `navigation-panel:hide` commands, or optionally use `navigation-panel:toggle`. The package fully supports multiple cursors.
 
 ## Real section level
 
-The package introduces the concept of multi-level headers. The user enters a tag with a level, which indicates **the maximum level** of the text associated with a given tag. The true level of the header will be determined when building the header tree using the rule that the header can have a level at most one greater than its predecessor. For example, if you enter a level 1 heading, then a level 2 heading, then a level 5 heading, then the real level of the last heading will be 3. The marker designations are for real headers. The real section level is use everywhere instead of user level.
+The package introduces the concept of multi-level headers. The user enters a tag with a level, which indicates **the maximum level** of the text associated with that tag. The actual level of the header will be determined when building the header tree using the rule that a header can have a level at most one greater than its predecessor. For example, if you enter a level 1 heading, then a level 2 heading, and then a level 5 heading, the actual level of the last heading will be 3. The marker designations are for real headers. The real section level is used everywhere instead of the user level.
 
 ## Highlight section
 
-For each header, the package can create a marker to highlight the line text in the editor. The marker style can be customized.
+For each header, the package can create a marker to highlight the corresponding line of text in the editor. The marker style can be customized.
 
 ## Categories
 
-Mark headers by categories. The categories can be filtered in bottom bar of panel, context menu of panel or by command. The categories are predefined: info, success, warning, error. The meaning of the categories depends on the creativity of the user, use them as you like.
+Headers can be marked with categories. The categories can be filtered in the bottom bar of the panel, the context menu of the panel, or using commands. The categories are predefined: info, success, warning, error. The meaning of the categories depends on the creativity of the user, so you can use them as you like.
 
-The settings of categories can be changed globally in package settings or locally by commands or in panel:
+The category settings can be changed globally in the package settings or locally using commands or in the panel:
 
 * `navigation-panel:all-categories`: activate all categories,
 * `navigation-panel:none-categories`: deactivate all categories,
@@ -64,7 +68,7 @@ The settings of categories can be changed globally in package settings or locall
 
 ## Collapse modes
 
-Elements of the header tree can be collapsed. This can improve workflow or document clarity. The global settings can be changed in package settings and local settings by context-menu of panel of by commands:
+The elements of the header tree can be collapsed, which can improve workflow or document clarity. The global settings can be changed in the package settings, and local settings can be adjusted using the context menu of the panel or through commands:
 
 * `navigation-panel:collapse-mode`: collapse all headers now and if rebuilding,
 * `navigation-panel:expand-mode`: uncollapse all headers now and if rebuilding,
@@ -72,7 +76,7 @@ Elements of the header tree can be collapsed. This can improve workflow or docum
 
 ## Section folding
 
-There are functions which provide fold actions (fold, unfold or toggle) of sections. The special future is to collapse all section a view like table of content. You may be interested in following commands:
+There are functions that provide folding actions (fold, unfold, or toggle) for sections. A special feature is the ability to collapse all sections to view them as a table of contents. You may be interested in the following commands:
 
 * `navigation-panel:fold-toggle`: toggle fold of current section,
 * `navigation-panel:fold-section`: fold current section,
@@ -87,13 +91,13 @@ There are functions which provide fold actions (fold, unfold or toggle) of secti
 
 ## regex testing
 
-In order to search for markers in a text editor, all lines of the editor are tested by global regular expressions. If the global expression returns a positive search result, the matched lines are further prepared. Global expressions can be found below, different for each scope.
+In order to search for markers in a text editor, all lines of the editor are tested using global regular expressions. If the global expression returns a positive search result, the matched lines are further processed. Global expressions can be found below, with different expressions for each scope.
 
-You can test and analyze regex's below at [regex101](https://regex101.com/). Just select flavor as `ECMAScript (JavaScript)` and paste statement.
+You can test and analyze the regex patterns below on [regex101](https://regex101.com/). Just select the flavor as `ECMAScript (JavaScript)` and paste the statement.
 
 ## Customize the appearance
 
-The panel can be adapted to the user's needs in many ways. Several options are outlined below. The colors can be adjusted to user preference and ui/syntax theme in `styles.less` (File/Stylesheet..).
+The panel can be customized to meet the user's needs in many ways. Several options are outlined below. The colors can be adjusted according to user preferences and the UI/syntax theme in the `styles.less` (File/Stylesheet..) file.
 
 * e.g. all markers has highlighted background, but level 1, 2 and 3 has their own color:
   ```
@@ -247,26 +251,4 @@ The package support the outline tree of [pdf-viewer](https://github.com/bacadra/
 
 # Contributing [🍺](https://www.buymeacoffee.com/asiloisad)
 
-If you have ideas on how to improve the package, see bugs or want to support new features - feel free to share it via GitHub.
-
-See my other packages for Atom & Pulsar Text Editors:
-<p align="center">
-<a href="https://github.com/bacadra/atom-autocomplete-sofistik"><img src="https://img.shields.io/github/v/tag/bacadra/atom-autocomplete-sofistik?style=for-the-badge&label=autocomplete-sofistik&color=blue" alt="autocomplete-sofistik">
-<a href="https://github.com/bacadra/atom-bib-finder"><img src="https://img.shields.io/github/v/tag/bacadra/atom-bib-finder?style=for-the-badge&label=bib-finder&color=blue" alt="bib-finder">
-<a href="https://github.com/bacadra/atom-hydrogen-run"><img src="https://img.shields.io/github/v/tag/bacadra/atom-hydrogen-run?style=for-the-badge&label=hydrogen-run&color=blue" alt="hydrogen-run">
-<a href="https://github.com/bacadra/atom-image-paste"><img src="https://img.shields.io/github/v/tag/bacadra/atom-image-paste?style=for-the-badge&label=image-paste&color=blue" alt="image-paste">
-<a href="https://github.com/bacadra/atom-language-latex"><img src="https://img.shields.io/github/v/tag/bacadra/atom-language-latex?style=for-the-badge&label=language-latex&color=blue" alt="language-latex">
-<a href="https://github.com/bacadra/atom-language-sofistik"><img src="https://img.shields.io/github/v/tag/bacadra/atom-language-sofistik?style=for-the-badge&label=language-sofistik&color=blue" alt="language-sofistik">
-<a href="https://github.com/bacadra/atom-language-tasklist"><img src="https://img.shields.io/github/v/tag/bacadra/atom-language-tasklist?style=for-the-badge&label=language-tasklist&color=blue" alt="language-tasklist">
-<a href="https://github.com/bacadra/atom-linter-ruff"><img src="https://img.shields.io/github/v/tag/bacadra/atom-linter-ruff?style=for-the-badge&label=linter-ruff&color=blue" alt="linter-ruff">
-<a href="https://github.com/bacadra/atom-linter-sofistik"><img src="https://img.shields.io/github/v/tag/bacadra/atom-linter-sofistik?style=for-the-badge&label=linter-sofistik&color=blue" alt="linter-sofistik">
-<a href="https://github.com/bacadra/atom-navigation-panel"><img src="https://img.shields.io/github/v/tag/bacadra/atom-navigation-panel?style=for-the-badge&label=navigation-panel&color=blue" alt="navigation-panel">
-<a href="https://github.com/bacadra/atom-open-external"><img src="https://img.shields.io/github/v/tag/bacadra/atom-open-external?style=for-the-badge&label=open-external&color=blue" alt="open-external">
-<a href="https://github.com/bacadra/atom-pdf-viewer"><img src="https://img.shields.io/github/v/tag/bacadra/atom-pdf-viewer?style=for-the-badge&label=pdf-viewer&color=blue" alt="pdf-viewer">
-<a href="https://github.com/bacadra/atom-project-files"><img src="https://img.shields.io/github/v/tag/bacadra/atom-project-files?style=for-the-badge&label=project-files&color=blue" alt="project-files">
-<a href="https://github.com/bacadra/atom-regex-aligner"><img src="https://img.shields.io/github/v/tag/bacadra/atom-regex-aligner?style=for-the-badge&label=regex-aligner&color=blue" alt="regex-aligner">
-<a href="https://github.com/bacadra/atom-sofistik-tools"><img src="https://img.shields.io/github/v/tag/bacadra/atom-sofistik-tools?style=for-the-badge&label=sofistik-tools&color=blue" alt="sofistik-tools">
-<a href="https://github.com/bacadra/atom-super-select"><img src="https://img.shields.io/github/v/tag/bacadra/atom-super-select?style=for-the-badge&label=super-select&color=blue" alt="super-select">
-<a href="https://github.com/bacadra/atom-tasklist-tools"><img src="https://img.shields.io/github/v/tag/bacadra/atom-tasklist-tools?style=for-the-badge&label=tasklist-tools&color=blue" alt="tasklist-tools">
-<a href="https://github.com/bacadra/atom-word-map"><img src="https://img.shields.io/github/v/tag/bacadra/atom-word-map?style=for-the-badge&label=word-map&color=blue" alt="word-map">
-</p>
+If you have any ideas on how to improve the package, spot any bugs, or would like to support the development of new features, please feel free to share them via GitHub.
