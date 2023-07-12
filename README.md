@@ -168,7 +168,7 @@ Additional letter can be used to provide additional visual effect:
 * `!`: error category
 * `_`: separator category
 
-## Markdown
+## Markdown & Tasklist
 
 Global regular expression is `^ *(\#+) (.*)`. The level is defined as count of `#`. The number of levels is endless.
 
