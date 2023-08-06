@@ -28,7 +28,9 @@
       color: @text-color-highlight;
     }
 
-    margin: 0.375em 0.375em 0em 0.375em;
+    margin: 0.375em;
+
+    &:empty { display: none }
   }
 
   .navigation-list {
@@ -124,6 +126,8 @@
     display: flex;
     background: inherit;
     width: 100%;
+
+    &:empty { display: none }
 
     .navigation-switch {
       width: 100%;
