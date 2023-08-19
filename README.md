@@ -1,43 +1,27 @@
 # navigation-panel
 
 <p align="center">
-  <a href="https://github.com/bacadra/atom-navigation-panel/tags">
-  <img src="https://img.shields.io/github/v/tag/bacadra/atom-navigation-panel?style=for-the-badge&label=Latest&color=blue" alt="Latest">
+  <a href="https://github.com/bacadra/pulsar-navigation-panel/tags">
+  <img src="https://img.shields.io/github/v/tag/bacadra/pulsar-navigation-panel?style=for-the-badge&label=Latest&color=blue" alt="Latest">
   </a>
-  <a href="https://github.com/bacadra/atom-navigation-panel/issues">
-  <img src="https://img.shields.io/github/issues-raw/bacadra/atom-navigation-panel?style=for-the-badge&color=blue" alt="OpenIssues">
+  <a href="https://github.com/bacadra/pulsar-navigation-panel/issues">
+  <img src="https://img.shields.io/github/issues-raw/bacadra/pulsar-navigation-panel?style=for-the-badge&color=blue" alt="OpenIssues">
   </a>
-  <a href="https://github.com/bacadra/atom-navigation-panel/blob/master/package.json">
-  <img src="https://img.shields.io/github/languages/top/bacadra/atom-navigation-panel?style=for-the-badge&color=blue" alt="Language">
+  <a href="https://github.com/bacadra/pulsar-navigation-panel/blob/master/package.json">
+  <img src="https://img.shields.io/github/languages/top/bacadra/pulsar-navigation-panel?style=for-the-badge&color=blue" alt="Language">
   </a>
-  <a href="https://github.com/bacadra/atom-navigation-panel/blob/master/LICENSE">
-  <img src="https://img.shields.io/github/license/bacadra/atom-navigation-panel?style=for-the-badge&color=blue" alt="Licence">
+  <a href="https://github.com/bacadra/pulsar-navigation-panel/blob/master/LICENSE">
+  <img src="https://img.shields.io/github/license/bacadra/pulsar-navigation-panel?style=for-the-badge&color=blue" alt="Licence">
   </a>
 </p>
 
-![docface](https://github.com/bacadra/atom-navigation-panel/blob/master/assets/docface.png?raw=true)
+![docface](https://github.com/bacadra/pulsar-navigation-panel/blob/master/assets/docface.png?raw=true)
 
 ## Installation
 
-### Atom Text Editor
+To install `navigation-panel` search for [navigation-panel](https://web.pulsar-edit.dev/packages/navigation-panel) in the Install pane of the Pulsar settings or run `ppm install navigation-panel`.
 
-The official Atom packages store has been [disabled](https://github.blog/2022-06-08-sunsetting-atom/). To obtain the latest version, please run the following shell command:
-
-```shell
-apm install bacadra/atom-navigation-panel
-```
-
-This will allow you to directly download the package from the GitHub repository.
-
-### Pulsar Text Editor
-
-The package is compatible with [Pulsar](https://pulsar-edit.dev/) and can be installed using the following command:
-
-```shell
-ppm install bacadra/atom-navigation-panel
-```
-
-Alternatively, you can directly install [navigation-panel](https://web.pulsar-edit.dev/packages/navigation-panel) from the Pulsar package store.
+Alternatively, run `ppm install bacadra/pulsar-navigation-panel` to install a package directly from Github repository.
 
 ## Sections panel
 
@@ -247,7 +231,7 @@ Global regular expression is `^ *(#define [^\n=]+$|#enddef)|^!([+-\\#\\$])!(?:ch
 
 ## pdf-viewer
 
-The package support the outline tree of [pdf-viewer](https://github.com/bacadra/atom-pdf-viewer). You can search through document by all-in outline tree instead of PDFjs outline.
+The package support the outline tree of [pdf-viewer](https://github.com/bacadra/pulsar-pdf-viewer). You can search through document by all-in outline tree instead of PDFjs outline.
 
 # Contributing [🍺](https://www.buymeacoffee.com/asiloisad)
 

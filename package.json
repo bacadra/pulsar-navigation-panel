@@ -1,11 +1,14 @@
 {
   "description": "Navigation panel for documents using custom symbols",
-  "homepage": "https://github.com/bacadra/atom-navigation-panel",
-  "url": "https://github.com/bacadra/atom-navigation-panel",
-  "repository": "https://github.com/bacadra/atom-navigation-panel",
+  "homepage": "https://github.com/bacadra/pulsar-navigation-panel",
+  "url": "https://github.com/bacadra/pulsar-navigation-panel",
+  "repository": "https://github.com/bacadra/pulsar-navigation-panel",
   "main": "./lib/main",
   "name": "navigation-panel",
   "version": "0.3.56",
+  "engines": {
+    "atom": ">=1.100.0 <2.0.0"
+  },  
   "keywords": [
     "bacadra",
     "navigation",
