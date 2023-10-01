@@ -131,7 +131,7 @@ Global regular expression is `([^%\n]*)%(\$+)([\*\+\-\!\_]?)%(.*)|^[^\%\n]*\\(pa
 In case of `([^%\n]*)%(\$+)%(.*)`, the additional letter can be used to provide additional visual effect:
 
 * `*`: info category
-* `+`: sucess category
+* `+`: success category
 * `-`: warning category
 * `!`: error category
 * `_`: separator category
@@ -147,7 +147,7 @@ Global regular expression is `([^%\n]*)%(\$+)([\*!-]?)%(.*)|^[ ]*\@(\w*)[ ]*{[ ]
 Additional letter can be used to provide additional visual effect:
 
 * `*`: info category
-* `+`: sucess category
+* `+`: success category
 * `-`: warning category
 * `!`: error category
 * `_`: separator category
@@ -173,7 +173,7 @@ Additional letter can be used to provide additional parse effect:
 Additional letter can be used to provide additional visual effect:
 
 * `*`: info category
-* `+`: sucess category
+* `+`: success category
 * `-`: warning category
 * `!`: error category
 * `_`: separator category
@@ -185,7 +185,7 @@ As special case you can use `#?#` or `#?<category>#` which mean auto level base 
 * e.g. `a = 5 #$$v#` -> `1.1. a`
 * e.g. `class MyCounty(Country): #$$p#` -> `1.1. MyCounty`
 * e.g. `document.section(1, 'Countries') #?!#` -> `1. Countries`
-* e.g. `document.section(2, 'United Kingdom') #?+#` -> `1.1. United Kingdom` with sucess category
+* e.g. `document.section(2, 'United Kingdom') #?+#` -> `1.1. United Kingdom` with success category
 * e.g. `document.section(2, 'United Kingdom') #?!#` -> `1.1. United Kingdom` with error category
 
 ## C-like
@@ -201,7 +201,7 @@ Additional letter can be used to provide additional parse effect:
 Additional letter can be used to provide additional visual effect:
 
 * `*`: info category
-* `+`: sucess category
+* `+`: success category
 * `-`: warning category
 * `!`: error category
 * `_`: separator category
@@ -212,7 +212,7 @@ As special case you can use `//?//` or `//?<category>//` which mean auto level b
 * e.g. `//$$// United Kingdom` -> `1.1. United Kingdom`
 * e.g. `a = 5 //$$v//` -> `1.1. a`
 * e.g. `document.section(1, 'Countries') //?!//` -> `1. Countries`
-* e.g. `document.section(2, 'United Kingdom') //?+//` -> `1.1. United Kingdom` with sucess category
+* e.g. `document.section(2, 'United Kingdom') //?+//` -> `1.1. United Kingdom` with success category
 * e.g. `document.section(2, 'United Kingdom') //?!//` -> `1.1. United Kingdom` with error category
 
 ## ReStructuredText
@@ -228,6 +228,19 @@ Global regular expression is `^ *(#define [^\n=]+$|#enddef)|^!([+-\\#\\$])!(?:ch
 * e.g. `!+!Chapter Design` -> `1.1.1.1. Design`
 * e.g. `+prog aqua` -> `1.1.1.1.1. aqua`
 * e.g. `+prog aqua \n head sections` -> `1.1.1.1.1.1. aqua: head sections`
+
+
+## Sinumerik
+
+Global regular expression is `^;{2}[*+\-!]? (.+)$`
+* e.g. `;;* TODO`
+
+Additional letter can be used to provide additional visual effect:
+
+* `*`: info category
+* `+`: success category
+* `-`: warning category
+* `!`: error category
 
 ## pdf-viewer
 
