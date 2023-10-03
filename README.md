@@ -84,7 +84,7 @@ You can test and analyze the regex patterns below on [regex101](https://regex101
 The panel can be customized to meet the user's needs in many ways. Several options are outlined below. The colors can be adjusted according to user preferences and the UI/syntax theme in the `styles.less` (File/Stylesheet..) file.
 
 * e.g. all markers has highlighted background, but level 1, 2 and 3 has their own color:
-  ```
+  ```less
   .navigation-marker {
     background: rgba(233, 228, 141, 0.3);
   }
@@ -100,16 +100,23 @@ The panel can be customized to meet the user's needs in many ways. Several optio
   ```
 
 * e.g. add top border to markers with level 1:
-  ```
+  ```less
   .navigation-marker-1 {
     border-top: 0.016px solid @text-color-info;
   }
   ```
 
-* change font to monospace (or any other...):
-  ```
+* e.g. change font to monospace (or any other...):
+  ```less
   .navigation-panel {
     font-family: monospace;
+  }
+  ```
+
+* e.g. change style of visible headers:
+  ```less
+  .navigation-panel .visible {
+    background: fade(green, 5%);
   }
   ```
 
@@ -228,7 +235,6 @@ Global regular expression is `^ *(#define [^\n=]+$|#enddef)|^!([+-\\#\\$])!(?:ch
 * e.g. `!+!Chapter Design` -> `1.1.1.1. Design`
 * e.g. `+prog aqua` -> `1.1.1.1.1. aqua`
 * e.g. `+prog aqua \n head sections` -> `1.1.1.1.1.1. aqua: head sections`
-
 
 ## Sinumerik
 
