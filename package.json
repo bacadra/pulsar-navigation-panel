@@ -8,7 +8,7 @@
   "version": "0.3.56",
   "engines": {
     "atom": ">=1.100.0 <2.0.0"
-  },  
+  },
   "keywords": [
     "bacadra",
     "navigation",
@@ -22,7 +22,8 @@
     "Markdown",
     "Python",
     "ReStructured",
-    "SOFiSTiK"
+    "SOFiSTiK",
+    "Sinumerik"
   ],
   "dependencies": {
     "diacritic": "0.0.2",
