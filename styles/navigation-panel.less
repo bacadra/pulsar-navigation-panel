@@ -94,8 +94,8 @@
           font-weight: bold;
         }
 
-        &.visible {
-          outline: 1px dashed;
+        &.visible .icon {
+          color: @ui-site-color-2;
         }
 
         &.info .navigation-text {
@@ -224,7 +224,7 @@ atom-dock.bottom {
     margin-left: 0;
     display: flex;
     .navigation-tree {
-      margin-left: @navigation-indent/2;
+      margin-left: calc(@navigation-indent/2);
       display: table;
     }
   }
