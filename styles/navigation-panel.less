@@ -1,7 +1,7 @@
 @import "ui-variables";
 
 @navigation-indent: 15px;
-@navigation-shader: rgba(0, 0, 0, 0.1);
+@navigation-shader: rgba(127, 127, 127, 0.1);
 
 .navigation-panel {
   display: flex;
@@ -94,8 +94,11 @@
           font-weight: bold;
         }
 
-        &.visible .navigation-icon {
-          color: @text-color-info;
+        &.visible {
+          background: fade(@text-color-info, 5%);
+          .navigation-icon {
+            color: @text-color-info;
+          }
         }
 
         &.info .navigation-text {
