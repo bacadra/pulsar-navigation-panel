@@ -159,12 +159,20 @@ Additional letter can be used to provide additional visual effect:
 * `!`: error category
 * `_`: separator category
 
-## Markdown & Tasklist
+## Markdown
 
 Global regular expression is `^ *(\#+) (.*)`. The level is defined as count of `#`. The number of levels is endless.
 
 * e.g. `# Countries` -> `1. Countries`
 * e.g. `## United Kingdom` -> `1.1. United Kingdom`
+
+## Tasklist
+
+Global regular expression is `(?:^(#+) +(.+?) *$|^ *(.+?) *: *$)`. The level is defined as count of `#`. The number of levels is endless. A header level is equal 5.
+
+* e.g. `# Countries` -> `1. Countries`
+* e.g. `## United Kingdom` -> `1.1. United Kingdom`
+* e.g. `United Kingdom:` -> `1.1.1.1.1. United Kingdom`
 
 ## Python
 
