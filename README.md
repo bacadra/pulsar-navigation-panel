@@ -19,9 +19,7 @@
 
 ## Installation
 
-To install `navigation-panel` search for [navigation-panel](https://web.pulsar-edit.dev/packages/navigation-panel) in the Install pane of the Pulsar settings or run `ppm install navigation-panel`.
-
-Alternatively, you can run `ppm install bacadra/pulsar-navigation-panel` to install a package directly from the Github repository.
+To install `navigation-panel` search for [navigation-panel](https://web.pulsar-edit.dev/packages/navigation-panel) in the Install pane of the Pulsar settings or run `ppm install navigation-panel`. Alternatively, you can run `ppm install bacadra/pulsar-navigation-panel` to install a package directly from the Github repository.
 
 ## Sections panel
 
