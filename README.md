@@ -1,20 +1,5 @@
 # navigation-panel
 
-<p align="center">
-  <a href="https://github.com/bacadra/pulsar-navigation-panel/tags">
-  <img src="https://img.shields.io/github/v/tag/bacadra/pulsar-navigation-panel?style=for-the-badge&label=Latest&color=blue" alt="Latest">
-  </a>
-  <a href="https://github.com/bacadra/pulsar-navigation-panel/issues">
-  <img src="https://img.shields.io/github/issues-raw/bacadra/pulsar-navigation-panel?style=for-the-badge&color=blue" alt="OpenIssues">
-  </a>
-  <a href="https://github.com/bacadra/pulsar-navigation-panel/blob/master/package.json">
-  <img src="https://img.shields.io/github/languages/top/bacadra/pulsar-navigation-panel?style=for-the-badge&color=blue" alt="Language">
-  </a>
-  <a href="https://github.com/bacadra/pulsar-navigation-panel/blob/master/LICENSE">
-  <img src="https://img.shields.io/github/license/bacadra/pulsar-navigation-panel?style=for-the-badge&color=blue" alt="Licence">
-  </a>
-</p>
-
 ![docface](https://github.com/bacadra/pulsar-navigation-panel/blob/master/assets/docface.png?raw=true)
 
 ## Installation
@@ -39,37 +24,37 @@ Headers can be marked with categories. The categories can be filtered in the bot
 
 The category settings can be changed globally in the package settings or locally using commands or in the panel:
 
-* `navigation-panel:all-categories`: activate all categories,
-* `navigation-panel:none-categories`: deactivate all categories,
-* `navigation-panel:categories-toggle`: toggle all categories,
-* `navigation-panel:info-toggle`: toggle info category headers,
-* `navigation-panel:success-toggle`: toggle success category headers,
-* `navigation-panel:warning-toggle`: toggle warning category headers,
-* `navigation-panel:error-toggle`:  toggle error category headers,
-* `navigation-panel:standard-toggle`:  toggle category-less headers.
+- `navigation-panel:all-categories`: activate all categories,
+- `navigation-panel:none-categories`: deactivate all categories,
+- `navigation-panel:categories-toggle`: toggle all categories,
+- `navigation-panel:info-toggle`: toggle info category headers,
+- `navigation-panel:success-toggle`: toggle success category headers,
+- `navigation-panel:warning-toggle`: toggle warning category headers,
+- `navigation-panel:error-toggle`:  toggle error category headers,
+- `navigation-panel:standard-toggle`:  toggle category-less headers.
 
 ## Collapse modes
 
 The elements of the header tree can be collapsed, which can improve workflow or document clarity. The global settings can be changed in the package settings, and local settings can be adjusted using the context menu of the panel or through commands:
 
-* `navigation-panel:collapse-mode`: collapse all headers now and if rebuilding,
-* `navigation-panel:expand-mode`: uncollapse all headers now and if rebuilding,
-* `navigation-panel:auto-collapse`: expand only active headers.
+- `navigation-panel:collapse-mode`: collapse all headers now and if rebuilding,
+- `navigation-panel:expand-mode`: uncollapse all headers now and if rebuilding,
+- `navigation-panel:auto-collapse`: expand only active headers.
 
 ## Section folding
 
 There are functions that provide folding actions (fold, unfold, or toggle) for sections. A special feature is the ability to collapse all sections to view them as a table of contents. You may be interested in the following commands:
 
-* `navigation-panel:fold-toggle`: toggle fold of current section,
-* `navigation-panel:fold-section`: fold current section,
-* `navigation-panel:fold-section-at-n`: fold last section at level *n*,
-* `navigation-panel:fold-as-table`: fold all section but in nested form,
-* `navigation-panel:fold-all-infos`: fold as table, but only headers with category `info`,
-* `navigation-panel:fold-all-successes`: fold as table, but only headers with category `success`,
-* `navigation-panel:fold-all-warnings`: fold as table, but only headers with category `warning`,
-* `navigation-panel:fold-all-errors`: fold as table, but only headers with category `error`,
-* `navigation-panel:unfold`: unfold current section,
-* `navigation-panel:unfold-all`: unfold all sections.
+- `navigation-panel:fold-toggle`: toggle fold of current section,
+- `navigation-panel:fold-section`: fold current section,
+- `navigation-panel:fold-section-at-n`: fold last section at level *n*,
+- `navigation-panel:fold-as-table`: fold all section but in nested form,
+- `navigation-panel:fold-all-infos`: fold as table, but only headers with category `info`,
+- `navigation-panel:fold-all-successes`: fold as table, but only headers with category `success`,
+- `navigation-panel:fold-all-warnings`: fold as table, but only headers with category `warning`,
+- `navigation-panel:fold-all-errors`: fold as table, but only headers with category `error`,
+- `navigation-panel:unfold`: unfold current section,
+- `navigation-panel:unfold-all`: unfold all sections.
 
 ## regex testing
 
@@ -81,7 +66,7 @@ You can test and analyze the regex patterns below on [regex101](https://regex101
 
 The panel can be customized to meet the user's needs in many ways. Several options are outlined below. The colors can be adjusted according to user preferences and the UI/syntax theme in the `styles.less` (File/Stylesheet..) file.
 
-* e.g. all markers has highlighted background, but level 1, 2 and 3 has their own color:
+- e.g. all markers has highlighted background, but level 1, 2 and 3 has their own color:
   ```less
   .navigation-marker {
     background: rgba(233, 228, 141, 0.3);
@@ -97,21 +82,21 @@ The panel can be customized to meet the user's needs in many ways. Several optio
   }
   ```
 
-* e.g. add top border to markers with level 1:
+- e.g. add top border to markers with level 1:
   ```less
   .navigation-marker-1 {
     border-top: 0.016px solid @text-color-info;
   }
   ```
 
-* e.g. change font to monospace (or any other...):
+- e.g. change font to monospace (or any other...):
   ```less
   .navigation-panel {
     font-family: monospace;
   }
   ```
 
-* e.g. change style of visible headers:
+- e.g. change style of visible headers:
   ```less
   .navigation-panel .visible {
     background: fade(green, 5%);
@@ -128,49 +113,49 @@ Global regular expression is `^(=={0,5}|#\#{0,5})[ \t]+(.+?)(?:[ \t]+\1)?$`.
 
 Global regular expression is `([^%\n]*)%(\$+)([\*\+\-\!\_]?)%(.*)|^[^\%\n]*\\(part*?|chapter*?|section*?|subsection*?|subsubsection*?|paragraph*?|subparagraph*?)\*?(?:\[(.*)\])?{(.*)}`. The `\part{...}` is equal level 4, `\chapter{...}` is level 5 etc. The section commands can be changed in package settings.
 
-* e.g. `%$!% Countries` -> `1. Countries` with error category
-* e.g. `%$$% United Kingdom` -> `1.1. United Kingdom`
-* e.g. `\part{Resources}` -> `1.1.1.1. Resources`
-* e.g. `\part[Resources]{Resources but to long to TOC}` -> `1.1.1.1. Resources`
+- e.g. `%$!% Countries` -> `1. Countries` with error category
+- e.g. `%$$% United Kingdom` -> `1.1. United Kingdom`
+- e.g. `\part{Resources}` -> `1.1.1.1. Resources`
+- e.g. `\part[Resources]{Resources but to long to TOC}` -> `1.1.1.1. Resources`
 
 In case of `([^%\n]*)%(\$+)%(.*)`, the additional letter can be used to provide additional visual effect:
 
-* `*`: info category
-* `+`: success category
-* `-`: warning category
-* `!`: error category
-* `_`: separator category
+- `*`: info category
+- `+`: success category
+- `-`: warning category
+- `!`: error category
+- `_`: separator category
 
 ## BibTeX
 
 Global regular expression is `([^%\n]*)%(\$+)([\*!-]?)%(.*)|^[ ]*\@(\w*)[ ]*{[ ]*([^\,]*)`. The `@<type>{<text>,` is level 6.
 
-* e.g. `%$% Bibliography about countries` -> `1. Bibliography about countries`
-* e.g. `%$$% United Kingdom` -> `1.1. United Kingdom`
-* e.g. `@book{jk2021, ...` -> `1.1.1.1.1.1. jk2021`
+- e.g. `%$% Bibliography about countries` -> `1. Bibliography about countries`
+- e.g. `%$$% United Kingdom` -> `1.1. United Kingdom`
+- e.g. `@book{jk2021, ...` -> `1.1.1.1.1.1. jk2021`
 
 Additional letter can be used to provide additional visual effect:
 
-* `*`: info category
-* `+`: success category
-* `-`: warning category
-* `!`: error category
-* `_`: separator category
+- `*`: info category
+- `+`: success category
+- `-`: warning category
+- `!`: error category
+- `_`: separator category
 
 ## Markdown
 
 Global regular expression is `^ *(\#+) (.*)`. The level is defined as count of `#`. The number of levels is endless.
 
-* e.g. `# Countries` -> `1. Countries`
-* e.g. `## United Kingdom` -> `1.1. United Kingdom`
+- e.g. `# Countries` -> `1. Countries`
+- e.g. `## United Kingdom` -> `1.1. United Kingdom`
 
 ## Tasklist
 
 Global regular expression is `(?:^(#+) +(.+?) *$|^ *(.+?) *: *$)`. The level is defined as count of `#`. The number of levels is endless. A header level is equal 5.
 
-* e.g. `# Countries` -> `1. Countries`
-* e.g. `## United Kingdom` -> `1.1. United Kingdom`
-* e.g. `United Kingdom:` -> `1.1.1.1.1. United Kingdom`
+- e.g. `# Countries` -> `1. Countries`
+- e.g. `## United Kingdom` -> `1.1. United Kingdom`
+- e.g. `United Kingdom:` -> `1.1.1.1.1. United Kingdom`
 
 ## Python
 
@@ -178,28 +163,28 @@ Global regular expression is `^([^#\n]*)#(?:%%)?(\$+[spv1]?|\?)([\*\+\-\!\_]?)#(
 
 Additional letter can be used to provide additional parse effect:
 
-* `s`: get only text from first string which occur at line
-* `p`: python def or class; show only type and name of object
-* `v`: variable; show only name of variable
-* `1`: use only first word (split by whitespace), without optional after-colon
+- `s`: get only text from first string which occur at line
+- `p`: python def or class; show only type and name of object
+- `v`: variable; show only name of variable
+- `1`: use only first word (split by whitespace), without optional after-colon
 
 Additional letter can be used to provide additional visual effect:
 
-* `*`: info category
-* `+`: success category
-* `-`: warning category
-* `!`: error category
-* `_`: separator category
+- `*`: info category
+- `+`: success category
+- `-`: warning category
+- `!`: error category
+- `_`: separator category
 
 As special case you can use `#?#` or `#?<category>#` which mean auto level base on pattern `<any>(<lvl as int>, "<text>"<any>)`. It is useful e.g. in PyLaTex or similar.
 
-* e.g. `#$# Countries` -> `1. Countries`
-* e.g. `#$$# United Kingdom` -> `1.1. United Kingdom`
-* e.g. `a = 5 #$$v#` -> `1.1. a`
-* e.g. `class MyCounty(Country): #$$p#` -> `1.1. MyCounty`
-* e.g. `document.section(1, 'Countries') #?!#` -> `1. Countries`
-* e.g. `document.section(2, 'United Kingdom') #?+#` -> `1.1. United Kingdom` with success category
-* e.g. `document.section(2, 'United Kingdom') #?!#` -> `1.1. United Kingdom` with error category
+- e.g. `#$# Countries` -> `1. Countries`
+- e.g. `#$$# United Kingdom` -> `1.1. United Kingdom`
+- e.g. `a = 5 #$$v#` -> `1.1. a`
+- e.g. `class MyCounty(Country): #$$p#` -> `1.1. MyCounty`
+- e.g. `document.section(1, 'Countries') #?!#` -> `1. Countries`
+- e.g. `document.section(2, 'United Kingdom') #?+#` -> `1.1. United Kingdom` with success category
+- e.g. `document.section(2, 'United Kingdom') #?!#` -> `1.1. United Kingdom` with error category
 
 ## C-like
 
@@ -207,26 +192,26 @@ Global regular expression is `^([^\/\/\n]*)\/\/(\$+[sv1]?|\?)([\*\+\-\!\_]?)\/\/
 
 Additional letter can be used to provide additional parse effect:
 
-* `s`: get only text from first string which occur at line
-* `v`: variable; show only name of variable
-* `1`: use only first word (split by whitespace)
+- `s`: get only text from first string which occur at line
+- `v`: variable; show only name of variable
+- `1`: use only first word (split by whitespace)
 
 Additional letter can be used to provide additional visual effect:
 
-* `*`: info category
-* `+`: success category
-* `-`: warning category
-* `!`: error category
-* `_`: separator category
+- `*`: info category
+- `+`: success category
+- `-`: warning category
+- `!`: error category
+- `_`: separator category
 
 As special case you can use `//?//` or `//?<category>//` which mean auto level base on pattern `<any>(<lvl as int>, "<text>"<any>)`.
 
-* e.g. `//$// Countries` -> `1. Countries`
-* e.g. `//$$// United Kingdom` -> `1.1. United Kingdom`
-* e.g. `a = 5 //$$v//` -> `1.1. a`
-* e.g. `document.section(1, 'Countries') //?!//` -> `1. Countries`
-* e.g. `document.section(2, 'United Kingdom') //?+//` -> `1.1. United Kingdom` with success category
-* e.g. `document.section(2, 'United Kingdom') //?!//` -> `1.1. United Kingdom` with error category
+- e.g. `//$// Countries` -> `1. Countries`
+- e.g. `//$$// United Kingdom` -> `1.1. United Kingdom`
+- e.g. `a = 5 //$$v//` -> `1.1. a`
+- e.g. `document.section(1, 'Countries') //?!//` -> `1. Countries`
+- e.g. `document.section(2, 'United Kingdom') //?+//` -> `1.1. United Kingdom` with success category
+- e.g. `document.section(2, 'United Kingdom') //?!//` -> `1.1. United Kingdom` with error category
 
 ## ReStructuredText
 
@@ -236,28 +221,28 @@ Global regular expression is `^(.+)\n([!-/:-@[-[-~])\2+$`.
 
 Global regular expression is `^ *(#define [^\n=]+$|#enddef)|^!([+-\\#\\$])!(?:chapter|kapitel) (.*)|(^(?! *\$)[^!\n]*)!(\$+)!(.*)|^ *([+-])?prog +([^\n]*)(?:\n *head +(.+))?|^ *!.! +(.*)|^\$ graphics +(\d+) +\| +picture +(\d+) +\| +layer +(\d+) +: *(.*)`. The `chapter` is equal level 4, `prog` is equal level 5 and `label` is equal level 6.
 
-* e.g. `!$! Design slab` -> `1. Design slab`
-* e.g. `!$$! Req. reinforcement` -> `1.1. Req. reinforcement`
-* e.g. `!+!Chapter Design` -> `1.1.1.1. Design`
-* e.g. `+prog aqua` -> `1.1.1.1.1. aqua`
-* e.g. `+prog aqua \n head sections` -> `1.1.1.1.1.1. aqua: head sections`
+- e.g. `!$! Design slab` -> `1. Design slab`
+- e.g. `!$$! Req. reinforcement` -> `1.1. Req. reinforcement`
+- e.g. `!+!Chapter Design` -> `1.1.1.1. Design`
+- e.g. `+prog aqua` -> `1.1.1.1.1. aqua`
+- e.g. `+prog aqua \n head sections` -> `1.1.1.1.1.1. aqua: head sections`
 
 ## Sinumerik
 
 Global regular expression is `^;{2}[*+\-!]? (.+)$`
-* e.g. `;;* TODO`
+- e.g. `;;* TODO`
 
 Additional letter can be used to provide additional visual effect:
 
-* `*`: info category
-* `+`: success category
-* `-`: warning category
-* `!`: error category
+- `*`: info category
+- `+`: success category
+- `-`: warning category
+- `!`: error category
 
 ## pdf-viewer
 
 The package support the outline tree of [pdf-viewer](https://github.com/bacadra/pulsar-pdf-viewer). You can search through document by all-in outline tree instead of PDFjs outline.
 
-# Contributing [🍺](https://www.buymeacoffee.com/asiloisad)
+# Contributing
 
 If you have any ideas on how to improve the package, spot any bugs, or would like to support the development of new features, please feel free to share them via GitHub.
