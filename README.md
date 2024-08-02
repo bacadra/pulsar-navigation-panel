@@ -168,13 +168,17 @@ Additional letter can be used to provide additional parse effect:
 - `v`: variable; show only name of variable
 - `1`: use only first word (split by whitespace), without optional after-colon
 
-Additional letter can be used to provide additional visual effect:
+One additional letter can be used to assign a category:
 
 - `*`: info category
 - `+`: success category
 - `-`: warning category
 - `!`: error category
-- `_`: separator category
+
+Any additional letters can be used to provide additional visual effect:
+
+- `_`: separator line above the item
+- `<`: increase font size
 
 As special case you can use `#?#` or `#?<category>#` which mean auto level base on pattern `<any>(<lvl as int>, "<text>"<any>)`. It is useful e.g. in PyLaTex or similar.
 
