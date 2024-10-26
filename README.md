@@ -1,5 +1,7 @@
 # navigation-panel
 
+Document navigation panel using special symbols.
+
 ![docface](https://github.com/bacadra/pulsar-navigation-panel/blob/master/assets/docface.png?raw=true)
 
 ## Installation
@@ -8,7 +10,7 @@ To install `navigation-panel` search for [navigation-panel](https://web.pulsar-e
 
 ## Sections panel
 
-This package provides a panel for navigating through custom symbols in text editors. The tree items are manually created by inserting special markers into the text editor. Multiple scopes are supported (see below) with their own marker system. You can open or hide the panel using the `navigation-panel:open` and `navigation-panel:hide` commands, or optionally use `navigation-panel:toggle`. The package fully supports multiple cursors.
+This package provides a panel for navigating through custom symbols in text editors. The tree items are manually created by inserting special markers into the text editor. Multiple scopes are supported (see below) with their own marker system. You can open or hide the panel using the `navigation-panel:open` and `navigation-panel:hide` commands or optionally use `navigation-panel:toggle`. The package supports multiple cursors.
 
 ## Real section level
 
@@ -24,37 +26,37 @@ Headers can be marked with categories. The categories can be filtered in the bot
 
 The category settings can be changed globally in the package settings or locally using commands or in the panel:
 
-- `navigation-panel:all-categories`: activate all categories,
-- `navigation-panel:none-categories`: deactivate all categories,
-- `navigation-panel:categories-toggle`: toggle all categories,
-- `navigation-panel:info-toggle`: toggle info category headers,
-- `navigation-panel:success-toggle`: toggle success category headers,
-- `navigation-panel:warning-toggle`: toggle warning category headers,
-- `navigation-panel:error-toggle`:  toggle error category headers,
-- `navigation-panel:standard-toggle`:  toggle category-less headers.
+- `navigation-panel:all-categories`: activate all categories
+- `navigation-panel:none-categories`: deactivate all categories
+- `navigation-panel:categories-toggle`: toggle all categories
+- `navigation-panel:info-toggle`: toggle info category headers
+- `navigation-panel:success-toggle`: toggle success category headers
+- `navigation-panel:warning-toggle`: toggle warning category headers
+- `navigation-panel:error-toggle`:  toggle error category headers
+- `navigation-panel:standard-toggle`:  toggle category-less headers
 
 ## Collapse modes
 
 The elements of the header tree can be collapsed, which can improve workflow or document clarity. The global settings can be changed in the package settings, and local settings can be adjusted using the context menu of the panel or through commands:
 
-- `navigation-panel:collapse-mode`: collapse all headers now and if rebuilding,
-- `navigation-panel:expand-mode`: uncollapse all headers now and if rebuilding,
-- `navigation-panel:auto-collapse`: expand only active headers.
+- `navigation-panel:collapse-mode`: collapse all headers now and if rebuilding
+- `navigation-panel:expand-mode`: uncollapse all headers now and if rebuilding
+- `navigation-panel:auto-collapse`: expand only active headers
 
 ## Section folding
 
 There are functions that provide folding actions (fold, unfold, or toggle) for sections. A special feature is the ability to collapse all sections to view them as a table of contents. You may be interested in the following commands:
 
-- `navigation-panel:fold-toggle`: toggle fold of current section,
-- `navigation-panel:fold-section`: fold current section,
-- `navigation-panel:fold-section-at-n`: fold last section at level *n*,
-- `navigation-panel:fold-as-table`: fold all section but in nested form,
-- `navigation-panel:fold-all-infos`: fold as table, but only headers with category `info`,
-- `navigation-panel:fold-all-successes`: fold as table, but only headers with category `success`,
-- `navigation-panel:fold-all-warnings`: fold as table, but only headers with category `warning`,
-- `navigation-panel:fold-all-errors`: fold as table, but only headers with category `error`,
-- `navigation-panel:unfold`: unfold current section,
-- `navigation-panel:unfold-all`: unfold all sections.
+- `navigation-panel:fold-toggle`: toggle fold of current section
+- `navigation-panel:fold-section`: fold current section
+- `navigation-panel:fold-section-at-n`: fold last section at level *n*
+- `navigation-panel:fold-as-table`: fold all section but in nested form
+- `navigation-panel:fold-all-infos`: fold as table, but only headers with category `info`
+- `navigation-panel:fold-all-successes`: fold as table, but only headers with category `success`
+- `navigation-panel:fold-all-warnings`: fold as table, but only headers with category `warning`
+- `navigation-panel:fold-all-errors`: fold as table, but only headers with category `error`
+- `navigation-panel:unfold`: unfold current section
+- `navigation-panel:unfold-all`: unfold all sections
 
 ## regex testing
 
@@ -245,8 +247,8 @@ Additional letter can be used to provide additional visual effect:
 
 ## pdf-viewer
 
-The package support the outline tree of [pdf-viewer](https://github.com/bacadra/pulsar-pdf-viewer). You can search through document by all-in outline tree instead of PDFjs outline.
+The package support the outline tree of [pdf-viewer](https://github.com/bacadra/pulsar-pdf-viewer). You can search through document by all-in outline tree instead of PDFjs outline. A section number can be hidden.
 
 # Contributing
 
-If you have any ideas on how to improve the package, spot any bugs, or would like to support the development of new features, please feel free to share them via GitHub.
+Got ideas to make this package better, found a bug, or want to help add new features? Just drop your thoughts on GitHub — any feedback’s welcome!
