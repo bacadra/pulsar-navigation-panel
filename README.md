@@ -66,7 +66,7 @@ You can test and analyze the regex patterns below on [regex101](https://regex101
 
 ## Customize the appearance
 
-The panel can be customized to meet the user's needs in many ways. Several options are outlined below. The colors can be adjusted according to user preferences and the UI/syntax theme in the `styles.less` (File/Stylesheet..) file.
+Markers can be customized to meet the user's needs. The customization file `styles.less` can be opened by menu bar `File/Stylesheet...` or by command `application:open-your-stylesheet`.
 
 - e.g. all markers has highlighted background, but level 1, 2 and 3 has their own color:
   ```less
