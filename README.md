@@ -68,19 +68,19 @@ You can test and analyze the regex patterns below on [regex101](https://regex101
 
 Markers can be customized to meet the user's needs. The customization file `styles.less` can be opened by menu bar `File/Stylesheet...` or by command `application:open-your-stylesheet`.
 
-- e.g. all markers has highlighted background, but level 1, 2 and 3 has their own color:
+- e.g. all markers has highlighted background, but only level 1, 2 and 3 has their own color:
   ```less
   .navigation-marker {
     background: rgba(233, 228, 141, 0.3);
   }
-  .navigation-marker-1 {
-    background: rgba(197, 218, 131, 0.3);
+  .navigation-marker-3 {
+    background: rgba(200, 197, 243, 0.3);
   }
   .navigation-marker-2 {
     background: rgba(250, 192, 209, 0.3);
   }
-  .navigation-marker-3 {
-    background: rgba(200, 197, 243, 0.3);
+  .navigation-marker-1 {
+    background: rgba(197, 218, 131, 0.3);
   }
   ```
 
