@@ -2,4 +2,4 @@
   'alt-n': 'navigation-panel:toggle'
 
 ".navigation-search":
-  'escape': "navigation-panel:clear-query"
+  'escape': "navigation-panel:clear"
