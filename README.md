@@ -20,6 +20,13 @@ The package introduces the concept of multi-level headers. The user enters a tag
 
 For each header, the package can create a marker to highlight the corresponding line of text in the editor. The marker style can be customized.
 
+## Search bar
+
+Headers can be filtered. Fuzzy-finder is used and items are sorted by score.
+
+- `navigation-panel:search`: focus search-editor
+- `navigation-panel:clear`: clear text of search-editor
+
 ## Categories
 
 Headers can be marked with categories. The categories can be filtered in the bottom bar of the panel, the context menu of the panel, or using commands. The categories are predefined: info, success, warning, error. The meaning of the categories depends on the creativity of the user, so you can use them as you like.
