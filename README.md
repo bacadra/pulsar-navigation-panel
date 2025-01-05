@@ -20,6 +20,16 @@ The package introduces the concept of multi-level headers. The user enters a tag
 
 For each header, the package can create a marker to highlight the corresponding line of text in the editor. The marker style can be customized.
 
+## Panel interactions
+
+A panel has few handly commands. There are mouse interactions:
+
+- `LeftMouseButton`: scroll to header
+- `Ctrl-LeftMouseButton`: create a new cursor on the header line and scroll to
+- `Alt-LeftMouseButton`: copy header text
+
+At context menu there are shortcuts to modify settings locally.
+
 ## Search bar
 
 Headers can be filtered. Fuzzy-finder is used and items are sorted by score.
