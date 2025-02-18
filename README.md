@@ -2,11 +2,11 @@
 
 Document navigation panel using special symbols.
 
-![docface](https://github.com/bacadra/pulsar-navigation-panel/blob/master/assets/docface.png?raw=true)
+![docface](https://github.com/asiloisad/pulsar-navigation-panel/blob/master/assets/docface.png?raw=true)
 
 ## Installation
 
-To install `navigation-panel` search for [navigation-panel](https://web.pulsar-edit.dev/packages/navigation-panel) in the Install pane of the Pulsar settings or run `ppm install navigation-panel`. Alternatively, you can run `ppm install bacadra/pulsar-navigation-panel` to install a package directly from the Github repository.
+To install `navigation-panel` search for [navigation-panel](https://web.pulsar-edit.dev/packages/navigation-panel) in the Install pane of the Pulsar settings or run `ppm install navigation-panel`. Alternatively, you can run `ppm install asiloisad/pulsar-navigation-panel` to install a package directly from the Github repository.
 
 ## Sections panel
 
@@ -264,7 +264,7 @@ Additional letter can be used to provide additional visual effect:
 
 ## pdf-viewer
 
-The package support the outline tree of [pdf-viewer](https://github.com/bacadra/pulsar-pdf-viewer). You can search through document by all-in outline tree instead of PDFjs outline. A section number can be hidden.
+The package support the outline tree of [pdf-viewer](https://github.com/asiloisad/pulsar-pdf-viewer). You can search through document by all-in outline tree instead of PDFjs outline. A section number can be hidden.
 
 # Contributing
 
