@@ -178,7 +178,7 @@ Global regular expression is `(?:^(#+) +(.+?) *$|^ *(.+?) *: *$)`. The level is 
 
 ## Python
 
-Global regular expression is `^([^#\n]*)#(?:%%)?(\$+[spv1]?|\?)([\*\+\-\!\_]?)#(.*)` where count of `$` mean the level on list.
+Global regular expression is `^([^#\n]*)#(?:%%)?(\$+[spv1]?|\?)([\*\+\-\!\_]?)#(.*)` where count of `$` mean the level on list. Headers are compatible with [hydrogen-next](https://github.com/asiloisad/pulsar-hydrogen-next) cells.
 
 Additional letter can be used to provide additional parse effect:
 
@@ -202,6 +202,7 @@ Any additional letters can be used to provide additional visual effect:
 As special case you can use `#?#` or `#?<category>#` which mean auto level base on pattern `<any>(<lvl as int>, "<text>"<any>)`. It is useful e.g. in PyLaTex or similar.
 
 - e.g. `#$# Countries` -> `1. Countries`
+- e.g. `#$$$# Countries` -> `1. Countries` and cell marker
 - e.g. `#$$# United Kingdom` -> `1.1. United Kingdom`
 - e.g. `a = 5 #$$v#` -> `1.1. a`
 - e.g. `class MyCounty(Country): #$$p#` -> `1.1. MyCounty`
